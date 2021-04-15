@@ -2136,3 +2136,14 @@ footer .legal ul li a{
 		top: 17px;
 	}
 }
+
+/* -------------- beta registration survey --------------- */
+
+#beta-registration {
+	background: #122736 url('https://webcdn.triongames.com/landingpages/skydome/assets/images/background/background-beta-survey.jpg') no-repeat center top/cover;
+    min-height: 870px;
+}
+
+#beta-registration .survey {
+	
+}
