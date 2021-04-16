@@ -1,831 +1,878 @@
 @charset "utf-8";
 /* CSS Document */
 
-*{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-	position: relative;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: relative;
 }
 
 :focus {
-    outline: none;
+  outline: none;
 }
 
-body{
-    background-color: #122736;
-	color: #9e9e9e;
-	padding: 0;
-	font: 400 15px/1.2 "Kanit", sans-serif;
-    max-width: 1920px;
-    margin: 0px auto;
-    box-shadow: -8px 0px 15px rgba(0, 0, 0, 0.4), 8px 0px 15px rgba(0, 0, 0, 0.4);
+body {
+  background-color: #122736;
+  color: #9e9e9e;
+  padding: 0;
+  font: 400 15px/1.2 "Kanit", sans-serif;
+  max-width: 1920px;
+  margin: 0px auto;
+  box-shadow: -8px 0px 15px rgba(0, 0, 0, 0.4), 8px 0px 15px rgba(0, 0, 0, 0.4);
 }
 
-h1{
-	font: italic 600 75px/75px "Kanit", sans-serif;
-    margin-bottom: 20px;
-	color: #fff;
-	text-transform: uppercase;
+h1 {
+  font: italic 600 75px/75px "Kanit", sans-serif;
+  margin-bottom: 20px;
+  color: #fff;
+  text-transform: uppercase;
 }
 
-h2{
-    color: #fcfcfc;
-    padding-bottom: 20px;
-    font-size: 2.2em;
-    font-family: "Kanit", sans-serif; 
-    /* text-transform: uppercase; */
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+h2 {
+  color: #fcfcfc;
+  padding-bottom: 20px;
+  font-size: 2.2em;
+  font-family: "Kanit", sans-serif;
+  /* text-transform: uppercase; */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-h3{
-	color: #dcdcdc;
+h3 {
+  color: #dcdcdc;
 }
 
-section{
-    position: relative;
-	overflow: unset;
+section {
+  position: relative;
+  overflow: unset;
 }
 
 .row {
-    margin-right: -15px;
-    margin-left: -15px;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-@media (min-width:768px) {
-    .container {
-        width: 750px
-    }
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
 }
 
-@media (min-width:992px) {
-    .container {
-        width: 970px
-    }
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
 }
 
-@media (min-width:1200px) {
-    .container {
-        width: 1170px
-    }
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 
-@media (min-width:1440px) {
-    .container {
-        width: 1410px;
-    }
+@media (min-width: 1440px) {
+  .container {
+    width: 1410px;
+  }
 }
 
-@media screen and (min-width:1440px) and (max-width: 1599px){
-	h1 {
-		font: italic 600 70px / 70px Kanit, sans-serif;
-	}
+@media screen and (min-width: 1440px) and (max-width: 1599px) {
+  h1 {
+    font: italic 600 70px / 70px Kanit, sans-serif;
+  }
 }
 
-@media screen and (min-width:1200px) and (max-width: 1439px){
-	h1 {
-		font: italic 600 70px / 70px Kanit, sans-serif;
-	}
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  h1 {
+    font: italic 600 70px / 70px Kanit, sans-serif;
+  }
 }
 
-@media screen and (max-width: 1199px){
-	h1 {
-		font: italic 600 70px / 65px Kanit, sans-serif;
-	}
+@media screen and (max-width: 1199px) {
+  h1 {
+    font: italic 600 70px / 65px Kanit, sans-serif;
+  }
 }
 
-@media screen and (max-width: 768px){
-
+@media screen and (max-width: 768px) {
 }
 
-@media screen and (max-width: 600px){
-	h1 {
-		font: italic 600 50px / 45px Kanit, sans-serif;
-	}
+@media screen and (max-width: 600px) {
+  h1 {
+    font: italic 600 50px / 45px Kanit, sans-serif;
+  }
 }
 
-@media screen and (max-width: 480px){
-	h1{
-		font: italic 600 45px / 40px Kanit, sans-serif;
-	}
+@media screen and (max-width: 480px) {
+  h1 {
+    font: italic 600 45px / 40px Kanit, sans-serif;
+  }
 
-	section{
-		overflow: unset;
-	}
+  section {
+    overflow: unset;
+  }
 }
-
 
 #bg_mask {
-    position: absolute;
-    z-index: 99;
-    background: #000;
-    display: none;
-    top: 0;
-    left: 0;
+  position: absolute;
+  z-index: 99;
+  background: #000;
+  display: none;
+  top: 0;
+  left: 0;
 }
 
-.left-content{
-	padding-right: 30px;
-	width: 100%;
+.left-content {
+  padding-right: 30px;
+  width: 100%;
 }
 
-.right-content{
-    /*margin: 0px auto;*/
-    width: 70%;
+.right-content {
+  /*margin: 0px auto;*/
+  width: 70%;
 }
 
-.divider{
-	width: 95%;
-    /*max-width: 1200px;*/
-    height: 25px;
-    margin: 20px auto;
-	clear: both;
+.divider {
+  width: 95%;
+  /*max-width: 1200px;*/
+  height: 25px;
+  margin: 20px auto;
+  clear: both;
 }
 
-.divider img{
-	display: block;
-	width: 50px;
-	margin: 0px auto;
-	fill: #000;
+.divider img {
+  display: block;
+  width: 50px;
+  margin: 0px auto;
+  fill: #000;
 }
 
-.divider::before{
-    content: '';
-    width: 50%;
-    background: #2c6f98;
-    height: 1px;
-    position: absolute;
-    left: -3%;
-    top: 13px;
+.divider::before {
+  content: "";
+  width: 50%;
+  background: #2c6f98;
+  height: 1px;
+  position: absolute;
+  left: -3%;
+  top: 13px;
 }
 
-.divider::after{
-    content: '';
-    width: 50%;
-    background: #2c6f98;
-    height: 1px;
-    position: absolute;
-    right: -3%;
-    top: 13px;
+.divider::after {
+  content: "";
+  width: 50%;
+  background: #2c6f98;
+  height: 1px;
+  position: absolute;
+  right: -3%;
+  top: 13px;
 }
 
-.divider.small{
-	margin: 20px auto 20px 0;
+.divider.small {
+  margin: 20px auto 20px 0;
 }
 
-.divider.small img{
-	margin: 0;
+.divider.small img {
+  margin: 0;
 }
 
-.divider.small::before{
-	width: 0;
+.divider.small::before {
+  width: 0;
 }
 
 .divider.small::after {
-    content: '';
-    width: 80%;
-    background: #2c6f98;
-    height: 1px;
-    position: absolute;
-    right: 10%;
-    top: 13px;
+  content: "";
+  width: 80%;
+  background: #2c6f98;
+  height: 1px;
+  position: absolute;
+  right: 10%;
+  top: 13px;
 }
 
-.clear{
-	clear: both;
-	margin-bottom: 10px;
+.clear {
+  clear: both;
+  margin-bottom: 10px;
+}
+
+/* -------------- forms --------------- */
+
+.submit-container {
+  margin: 0px auto;
+  clear: both;
+  padding-top: 20px;
+  width: 323px;
+}
+
+.submit-container button {
+  width: 323px;
+  height: 60px;
+  background: #00101d;
+  border: 1px solid #2c6f98;
+  font: 500 22px/25px "Kanit", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .submit-container {
+    margin: 0px 5%;
+    width: 90%;
+  }
+
+  .submit-container button {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
 }
 
 /* -------------- nav --------------- */
 
-nav{
-	position: fixed;
-	max-width: 1440px;
-	width: 100%;
-	height: 56px;
-	top: 50px;
-	left: 50%;
-    transform: translate(-50%, 0%);
-    z-index: 25;    
+nav {
+  position: fixed;
+  max-width: 1440px;
+  width: 100%;
+  height: 56px;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 25;
 }
 
-.logo-small{
-	display: block;
-	background: transparent url('https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-logo-symbol.png') no-repeat center top/cover;
-    width: 140px;
-    height: 75px;
-    position: absolute;
-    left: 30px;
-    top: -10px;
-    z-index: 20;
-	text-indent: -9999px;
+.logo-small {
+  display: block;
+  background: transparent
+    url("https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-logo-symbol.png")
+    no-repeat center top/cover;
+  width: 140px;
+  height: 75px;
+  position: absolute;
+  left: 30px;
+  top: -10px;
+  z-index: 20;
+  text-indent: -9999px;
 }
 
-.nav-container{
-	width: 100%;
-	clip-path: polygon(0 0, 100% 0, 99% 100%, 1% 100%);
-    background: linear-gradient(to bottom, #13394c, #041824);
+.nav-container {
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 99% 100%, 1% 100%);
+  background: linear-gradient(to bottom, #13394c, #041824);
 }
 
-nav ul{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    color: #fcfcfc;
-    margin: 0px auto;
-	padding-left: 200px;
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  color: #fcfcfc;
+  margin: 0px auto;
+  padding-left: 200px;
 }
 
-nav ul li{
-    padding: 17px 50px;
-	cursor: pointer;
-	display: block;
-	font: 500 20px/24px "Kanit", sans-serif;
-	text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+nav ul li {
+  padding: 17px 50px;
+  cursor: pointer;
+  display: block;
+  font: 500 20px/24px "Kanit", sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 nav ul li a {
-    color: #fcfcfc;
-    text-decoration: none;
+  color: #fcfcfc;
+  text-decoration: none;
 }
 
-nav ul li:hover::before{
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 50%;
-    margin-left: -70px;
-    background: radial-gradient(ellipse closest-side, rgba(123,212,236,100), rgba(23,87,120,0));
-    width: 140px;
-    height: 50px;
+nav ul li:hover::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin-left: -70px;
+  background: radial-gradient(
+    ellipse closest-side,
+    rgba(123, 212, 236, 100),
+    rgba(23, 87, 120, 0)
+  );
+  width: 140px;
+  height: 50px;
 }
 
-.button{
-	margin-left: auto;
-    background-color: rgba(0,0,0,0.4);
-	clip-path: polygon(9% 0, 100% 0, 100% 100%, 0% 100%);
+.button {
+  margin-left: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  clip-path: polygon(9% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .signup,
-.signup a{
-	background-color: #f1d78f;
-    background-image: linear-gradient(to bottom, #F1D78E 47%, #bb7e30 60%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
-	text-transform: uppercase;
-	font-weight: 700;
+.signup a {
+  background-color: #f1d78f;
+  background-image: linear-gradient(to bottom, #f1d78e 47%, #bb7e30 60%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
 }
-	
+
 .page-inner {
-	bottom: 0;
-	top: 0;
-	color: rgba(255,255,255,0.9);
-	overflow: hidden;
-	background: transparent url('https://webcdn.triongames.com/landingpages/skydome/assets/images/background-forest.jpg') no-repeat center top;
-	background-size: 100%;
-	font-family: "Kanit", sans-serif;
-	min-height: 820px;
+  bottom: 0;
+  top: 0;
+  color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  background: transparent
+    url("https://webcdn.triongames.com/landingpages/skydome/assets/images/background-forest.jpg")
+    no-repeat center top;
+  background-size: 100%;
+  font-family: "Kanit", sans-serif;
+  min-height: 820px;
 }
 
-.glow{
-	background: radial-gradient(rgba(123,212,236,100), rgba(23,87,120,0));
-	width: 150px;
-	height: 50px;
+.glow {
+  background: radial-gradient(rgba(123, 212, 236, 100), rgba(23, 87, 120, 0));
+  width: 150px;
+  height: 50px;
 }
 
-@media screen and (max-width: 1440px){
-	nav{
-		width: 90%;
-	}
+@media screen and (max-width: 1440px) {
+  nav {
+    width: 90%;
+  }
 }
 
-@media screen and (max-width: 1199px){
-	nav ul li {
-		padding: 17px 30px;
-	}
+@media screen and (max-width: 1199px) {
+  nav ul li {
+    padding: 17px 30px;
+  }
 }
 
-@media screen and (max-width: 992px){
-	nav ul li{
-		padding: 14px 20px;
-		font: 500 16px/20px "Kanit", sans-serif;
-	}
+@media screen and (max-width: 992px) {
+  nav ul li {
+    padding: 14px 20px;
+    font: 500 16px/20px "Kanit", sans-serif;
+  }
 
-	.logo-small{
-		width: 110px;
-		height: 60px;
-		top: -5px;
-	}
+  .logo-small {
+    width: 110px;
+    height: 60px;
+    top: -5px;
+  }
 }
 
-@media screen and (max-width: 768px){
-	nav .item{
-		display: none;
-	}
+@media screen and (max-width: 768px) {
+  nav .item {
+    display: none;
+  }
 
-	nav{
-		position: absolute;
-		top: 25px;
-	}
+  nav {
+    position: absolute;
+    top: 25px;
+  }
 
-	nav ul{
-		padding-left: 60px;
-	}
+  nav ul {
+    padding-left: 60px;
+  }
 
-	.nav-container{
-		clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 100%);
-	}
+  .nav-container {
+    clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 100%);
+  }
 }
 
 /* -------------- home --------------- */
 
-#home{
-    background: #122736 url('https://webcdn.triongames.com/landingpages/skydome/assets/images/background/background-header.jpg') no-repeat center top/cover;
-    min-height: 870px;
-	border-bottom: 1px solid #be8436;
+#home {
+  background: #122736
+    url("https://webcdn.triongames.com/landingpages/skydome/assets/images/background/background-header.jpg")
+    no-repeat center top/cover;
+  min-height: 870px;
+  border-bottom: 1px solid #be8436;
 }
 
-#home .container{
-	z-index: 1;
-	height: 1000px;
+#home .container {
+  z-index: 1;
+  height: 1000px;
 }
 
 #home::after {
-    content: '';
-    background: transparent url('https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-divider-symbol.svg') no-repeat center top/cover;
-    width: 60px;
-    height: 30px;
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    margin-left: -30px;
-    z-index: 10;
+  content: "";
+  background: transparent
+    url("https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-divider-symbol.svg")
+    no-repeat center top/cover;
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  margin-left: -30px;
+  z-index: 10;
 }
 
 .dropdown {
-    position: absolute;
-    display: inline-block;
-    top: 5px;
-    right: 15px;
-    z-index: 20;
+  position: absolute;
+  display: inline-block;
+  top: 5px;
+  right: 15px;
+  z-index: 20;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #2c2c2c;
-    min-width: 30px;
-    padding: 0px;
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #2c2c2c;
+  min-width: 30px;
+  padding: 0px;
+  z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.lang{
-	display: block;
-	width: 22px;
-	height: 12px;
-    background: transparent url('https://webcdn.triongames.com/landingpages/skydome/assets/images/language/languages.png') no-repeat 0 0;
-    margin: 14px 10px 8px;
-    transform: scale(1.4);
+.lang {
+  display: block;
+  width: 22px;
+  height: 12px;
+  background: transparent
+    url("https://webcdn.triongames.com/landingpages/skydome/assets/images/language/languages.png")
+    no-repeat 0 0;
+  margin: 14px 10px 8px;
+  transform: scale(1.4);
 }
 
-.lang.de{
-	background-position: 0 -210px;
+.lang.de {
+  background-position: 0 -210px;
 }
-	
-.lang.uk{
-	background-position: 0 -15px;
+
+.lang.uk {
+  background-position: 0 -15px;
 }
-	
-.lang.us{
-	background-position: 0 -155px;
+
+.lang.us {
+  background-position: 0 -155px;
 }
-	
-.lang.fr{
-	background-position: 0 -30px;
+
+.lang.fr {
+  background-position: 0 -30px;
 }
 
 .dropdown-content .lang {
-    margin: 10px 10px 20px;
+  margin: 10px 10px 20px;
 }
 
 .dropdown-content .lang:last-child {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-#rocks{
-	display: none;
+#rocks {
+  display: none;
 }
 
-#logo{	
-	background: transparent url('https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-logo.png') no-repeat center top/cover;
-    width: 800px;
-    height: 400px;
-    position: absolute;
-	left: 50%;
-    margin-left: -400px;
-    bottom: 20px;
-    top: auto;
+#logo {
+  background: transparent
+    url("https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-logo.png")
+    no-repeat center top/cover;
+  width: 800px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  margin-left: -400px;
+  bottom: 20px;
+  top: auto;
 }
 
-.scrolldown{
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    /* transform: translate(-50%,400%); */
-    margin-left: -25px;
-    width: 50px;
-    text-align: center;
-    color: #ddd;
-    z-index: 1;
+.scrolldown {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  /* transform: translate(-50%,400%); */
+  margin-left: -25px;
+  width: 50px;
+  text-align: center;
+  color: #ddd;
+  z-index: 1;
 }
 
-.mouse{
-    width: 20px;
-    height: 34px;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    margin: 0px auto;
+.mouse {
+  width: 20px;
+  height: 34px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin: 0px auto;
 }
 
-.mouse::before{
-    content: "";
-    width: 4px;
-    height: 4px;
-    position: absolute;
-    top: 0px;
-    background: #dfdfdf;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%;
+.mouse::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: 0px;
+  background: #dfdfdf;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  opacity: 1;
+  animation: mouse 2s infinite;
+}
+
+@keyframes mouse {
+  from {
     opacity: 1;
-    animation: mouse 2s infinite;
+    top: 4px;
+  }
+  to {
+    opacity: 0;
+    top: 28px;
+  }
 }
 
-@keyframes mouse{
-	from{
-		opacity: 1;
-		top: 4px;
-	} 
-	to{
-		opacity: 0;
-		top: 28px;
-	}
+.video-background {
+  top: 0;
+  overflow: hidden;
+  z-index: 0;
+  position: absolute;
+  width: 1920px;
+  height: 870px;
+  margin-left: -960px;
+  left: 50%;
 }
 
-.video-background{
-    top: 0;
-    overflow: hidden;
-    z-index: 0;
-	position: absolute;
-	width: 1920px;
-    height: 870px;
-    margin-left: -960px;
-    left: 50%;
+#media .video-background {
+  height: 1000px;
 }
 
-#media .video-background{
-	height: 1000px;
+@media screen and (min-width: 1700px) {
 }
 
-@media screen and (min-width: 1700px){
-
+@media screen and (min-width: 1440px) and (max-width: 1699px) {
 }
 
-@media screen and (min-width:1440px) and (max-width: 1699px){	
-
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  #home .container {
+    height: 840px;
+  }
 }
 
-@media screen and (min-width:1200px) and (max-width: 1439px){
-	#home .container{
-		height: 840px;
-	}	
-	
+@media screen and (max-width: 1199px) {
+  #home .container {
+    height: 840px;
+  }
+
+  #logo {
+    width: 600px;
+    height: 300px;
+    margin-left: -300px;
+    bottom: 0px;
+  }
 }
 
-@media screen and (max-width: 1199px){
-	#home .container{
-		height: 840px;
-	}
+@media screen and (max-width: 991px) {
+  #home .container {
+    height: 840px;
+  }
 
-	#logo{
-		width: 600px;
-		height: 300px;
-		margin-left: -300px;
-		bottom: 0px;
-	}
+  #social_media {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 991px){
-	#home .container{
-		height: 840px;
-	}	
-	
-	#social_media{
-		display: none;
-	}
+@media screen and (max-width: 767px) {
+  #home {
+    min-height: 780px;
+  }
+
+  #home .container {
+    height: 740px;
+  }
+
+  #logo {
+    width: 450px;
+    height: 225px;
+    margin-left: -225px;
+    bottom: 0px;
+  }
 }
 
-@media screen and (max-width: 767px){
-	#home{
-    	min-height: 780px;		
-	}
-	
-	#home .container {
-		height: 740px;
-	}
+@media screen and (max-width: 479px) {
+  #home {
+    min-height: 500px;
+    height: 520px;
+  }
 
-	#logo {
-		width: 450px;
-		height: 225px;
-		margin-left: -225px;
-		bottom: 0px;
-	}
-}
+  #home .container {
+    height: 490px;
+  }
 
-@media screen and (max-width: 479px){
-	#home{
-		min-height: 500px;
-		height: 520px;
-	}
-
-	#home .container {
-		height: 490px;
-	}
-
-	#logo {
-		width: 300px;
-		height: 150px;
-		margin-left: -150px;
-		bottom: 0px;
-	}
+  #logo {
+    width: 300px;
+    height: 150px;
+    margin-left: -150px;
+    bottom: 0px;
+  }
 }
 
 /* -------------- about the game --------------- */
 
-#game{
-    background: #122736 url('https://webcdn.triongames.com/landingpages/skydome/assets/images/background/background-about-the-game.jpg') no-repeat center top/cover;
-    min-height: 675px;
-	padding-top: 140px;
+#game {
+  background: #122736
+    url("https://webcdn.triongames.com/landingpages/skydome/assets/images/background/background-about-the-game.jpg")
+    no-repeat center top/cover;
+  min-height: 675px;
+  padding-top: 140px;
 }
 
-#game.release{
-	min-height: 1300px;
+#game.release {
+  min-height: 1300px;
 }
 
-#game .container{
-	display: flex;
+#game .container {
+  display: flex;
 }
 
-#game .content-left{
-	width: 50%;
+#game .content-left {
+  width: 50%;
 }
 
-#game .content-right{
-	width: 50%;
+#game .content-right {
+  width: 50%;
 }
 
 #game::before {
-    content: '';
-    background: linear-gradient(0deg, transparent 25%, rgba(0,0,0,0.65));
-    height: 250px;
+  content: "";
+  background: linear-gradient(0deg, transparent 25%, rgba(0, 0, 0, 0.65));
+  height: 250px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: auto;
+  z-index: 1;
+}
+
+#game h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  line-height: 3rem;
+  padding-bottom: 0.75rem;
+}
+
+#game p {
+  padding-bottom: 20px;
+  max-width: 82%;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #fcfcfc;
+}
+
+#game a {
+  color: #fff;
+}
+
+#game .video-section {
+  margin-top: 5%;
+}
+
+#game .game-headline {
+  width: 1200px;
+  height: 150px;
+  position: relative;
+}
+
+#game .trailer {
+  display: block;
+  width: 786px;
+  height: 433px;
+}
+
+#game .trailer::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 787px;
+  height: 434px;
+  background: url("https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-image-border.svg");
+  z-index: 10;
+}
+
+#game .trailer img {
+  mask-image: url("https://assets.landingpages.gamigo.com/assets/skydome/skydome-image-mask.svg");
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("https://assets.landingpages.gamigo.com/assets/skydome/skydome-image-mask.svg");
+  -webkit-mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+#game .trailer .description {
+  position: absolute;
+  bottom: 50px;
+  left: -10px;
+  z-index: 1;
+  background-color: #be8436;
+  padding: 10px 50px;
+  font: 400 20px/23px "Kanit", sans-serif;
+}
+
+@media screen and (min-width: 1440px) {
+  #game h1 {
+    font-size: 66px;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1599px) {
+  #game .content-left {
+    width: 50%;
+  }
+
+  #game p {
+    max-width: 90%;
+  }
+
+  #game .trailer {
+    transform: scale(0.8);
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+}
+
+#features {
+  /*display: none;*/
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  #game .content-left {
+    width: 45%;
+  }
+
+  #game p {
+    max-width: 90%;
+  }
+
+  #game .trailer {
+    transform: scale(0.75);
+    margin-left: -75px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  #game {
+    padding-top: 85px;
+  }
+
+  #game .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #game .content-left,
+  #game .content-right {
     width: 100%;
-    position: absolute;
-    top: 0px;
-    left: auto;
-    z-index: 1;
+  }
+
+  #game p {
+    max-width: 100%;
+  }
+
+  #game .trailer {
+    margin: 0px auto;
+  }
 }
 
-#game h2{
-    font-size: 2.5rem;
-    color: #fff;
-    line-height: 3rem;
-    padding-bottom: 0.75rem;
+@media screen and (max-width: 991px) {
+  #game .trailer {
+    transform: scale(0.85);
+    margin-left: -30px;
+  }
 }
 
-#game p{
-	padding-bottom: 20px;
-    max-width: 82%;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    color: #fcfcfc;
+@media screen and (max-width: 767px) {
+  #game {
+    padding-top: 60px;
+  }
+
+  #game::before {
+    height: 100px;
+  }
+
+  #game .trailer {
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    margin-left: auto;
+  }
+
+  #game .trailer::before {
+    display: none;
+  }
+
+  #game .trailer img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #be8436;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  #game .trailer .description {
+    left: 0px;
+  }
+
+  #game p {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    font-weight: 300;
+  }
 }
 
-#game a{
-	color: #fff;
+@media screen and (max-width: 600px) {
+  #game .trailer {
+    padding-bottom: 20px;
+  }
 }
 
-#game .video-section{
-	margin-top: 5%;
-}
+@media screen and (max-width: 479px) {
+  #game h2 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
 
-#game .game-headline{
-	width: 1200px;
-	height: 150px;
-	position: relative;
-}
-
-#game .trailer{
-	display: block;
-	width: 786px;
-	height: 433px;
-}
-
-#game .trailer::before{
-	content: '';
-	position: absolute;
-	top: 10px;
-	left: -10px;
-	width: 787px;
-	height: 434px;
-	background: url('https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-image-border.svg');
-	z-index: 10;
-}
-
-#game .trailer img{
-	mask-image: url('https://assets.landingpages.gamigo.com/assets/skydome/skydome-image-mask.svg');
-	mask-size: 100%;
-	mask-repeat: no-repeat;
-	mask-position: center;
-	-webkit-mask-image: url('https://assets.landingpages.gamigo.com/assets/skydome/skydome-image-mask.svg');
-	-webkit-mask-size: 100%;
-	-webkit-mask-repeat: no-repeat;
-	-webkit-mask-position: center;
-}
-
-#game .trailer .description{
-	position: absolute;
-    bottom: 50px;
-    left: -10px;
-    z-index: 1;
-    background-color: #be8436;
-    padding: 10px 50px;
-    font: 400 20px/23px "Kanit", sans-serif;
-}
-
-@media screen and (min-width: 1440px){
-	#game h1{
-		font-size: 66px;
-	}	
-}
-
-@media screen and (min-width:1440px) and (max-width: 1599px){
-	#game .content-left {
-		width: 50%;
-	}
-
-	#game p {
-		max-width: 90%;
-	}
-
-	#game .trailer{
-		transform: scale(0.8);
-		margin-left: 0;
-	}
-}
-
-@media screen and (min-width:1200px){
-
-}
-
-#features{
-	/*display: none;*/
-}
-
-@media screen and (min-width:1200px) and (max-width: 1439px){
-	#game .content-left {
-		width: 45%;
-	}
-
-	#game p {
-		max-width: 90%;
-	}
-
-	#game .trailer{
-    	transform: scale(0.75);
-    	margin-left: -75px;
-	}
-}
-
-@media screen and (max-width: 1199px){
-	#game{
-		padding-top: 85px;
-	}
-
-	#game .container {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	#game .content-left,
-	#game .content-right {
-    	width: 100%;
-	}
-
-	#game p{
-		max-width: 100%;
-	}
-
-	#game .trailer{
-		margin: 0px auto;
-	}
-}
-
-@media screen and (max-width: 991px){
-	#game .trailer{
-		transform: scale(0.85);
-		margin-left: -30px;
-	}	
-}
-
-@media screen and (max-width: 767px){
-	#game {
-		padding-top: 60px;
-	}
-
-	#game::before{
-		height: 100px;
-	}
-
-	#game .trailer {
-		width: 100%;
-		height: auto;
-		transform: scale(1);
-		margin-left: auto;
-	}
-
-	#game .trailer::before{
-		display: none;
-	}
-
-	#game .trailer img{
-		width: 100%;
-		height: auto;
-		border: 1px solid #be8436;
-		-webkit-mask-image: none;
-		mask-image: none;
-	}
-
-	#game .trailer .description{
-		left: 0px;
-	}
-
-	#game p{
-		font-size: 1.1rem;
-		line-height: 1.4rem;
-		font-weight: 300;
-	}
-}
-
-@media screen and (max-width: 600px){
-	#game .trailer{
-		padding-bottom: 20px;
-	}
-}
-
-@media screen and (max-width: 479px){
-	#game h2{
-		font-size: 1.75rem;
-		line-height: 2rem;
-	}
-
-	#game .trailer .description{
-		bottom: 30px;
-		padding: 5px 30px;
-		font: 400 14px/20px "Kanit", sans-serif;
-	}
+  #game .trailer .description {
+    bottom: 30px;
+    padding: 5px 30px;
+    font: 400 14px/20px "Kanit", sans-serif;
+  }
 }
 
 /* -------------- signup --------------- */
 
-#signup{
-    background: #122736 url('https://webcdn.triongames.com/landingpages/skydome/assets/images/background/background-signup.jpg') no-repeat center top/cover;
-    height: 1420px;
-	padding-top: 150px;
-	overflow: hidden;
+#signup {
+  background: #122736
+    url("https://webcdn.triongames.com/landingpages/skydome/assets/images/background/background-signup.jpg")
+    no-repeat center top/cover;
+  height: 1420px;
+  padding-top: 150px;
+  overflow: hidden;
 }
 
 /*#signup h1 span{
@@ -835,740 +882,711 @@ nav ul li:hover::before{
     float: right;
 }*/
 
-#signup h1{
-	text-align: center;
+#signup h1 {
+  text-align: center;
 }
 
-#signup p{
-	font-size: 1.2rem;
-    line-height: 1.5rem;
-    color: #fcfcfc;
+#signup p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #fcfcfc;
 }
 
-#signup .intro{
-	max-width: 900px;
-	margin: 0px auto;
+#signup .intro {
+  max-width: 900px;
+  margin: 0px auto;
 }
 
-#signup .register{
-	background: rgba(0,19,29,0.7);
-    width: 470px;
-    height: 570px;
-    padding: 20px;
-	left: 50%;
-    margin-left: -235px;
-    margin-top: 200px;
+#signup .register {
+  background: rgba(0, 19, 29, 0.7);
+  width: 470px;
+  height: 570px;
+  padding: 20px;
+  left: 50%;
+  margin-left: -235px;
+  margin-top: 200px;
 }
 
-#signup .register::before{
-	content: '';
-	border: 1px solid #2c6f98;
-	width: 470px;
-	height: 570px;
-	position: absolute;
-	top: 10px;
-	left: -10px;
+#signup .register::before {
+  content: "";
+  border: 1px solid #2c6f98;
+  width: 470px;
+  height: 570px;
+  position: absolute;
+  top: 10px;
+  left: -10px;
 }
 
-#signup .register h4{
-	font: 600 2.5rem / 3rem "Kanit", sans-serif;
-	color: #fff;
-    margin: 10px 0 10px -10px;
-	text-align: center;
+#signup .register h4 {
+  font: 600 2.5rem / 3rem "Kanit", sans-serif;
+  color: #fff;
+  margin: 10px 0 10px -10px;
+  text-align: center;
 }
 
-#signup .register h4 span{
-	font-size: 3.8rem;
+#signup .register h4 span {
+  font-size: 3.8rem;
 }
 
-#signup .register p{
-	font-size: 1.25rem;
-	padding-bottom: 10px;
-	text-align: center;
+#signup .register p {
+  font-size: 1.25rem;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
-#signup .email-input{
-	width: 420px;
-    display: block;
-	font: 400 15px/18px "Kanit", sans-serif;
-	border: 1px solid #287FAD;
-	color: #fff;
-	background: rgba(0,0,0,0.9);
-    padding: 15px 20px;
-    left: 50%;
-    margin: 20px 0 10px -210px;
+#signup .email-input {
+  width: 420px;
+  display: block;
+  font: 400 15px/18px "Kanit", sans-serif;
+  border: 1px solid #287fad;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 15px 20px;
+  left: 50%;
+  margin: 20px 0 10px -210px;
 }
 
 #signup .register .confirmation-box {
-    height: 20px;
-    width: 20px;
-    margin-top: 16px;
-    outline: 2px solid #152735;
-    border-radius: 4px;
-    float: left;
+  height: 20px;
+  width: 20px;
+  margin-top: 16px;
+  outline: 2px solid #152735;
+  border-radius: 4px;
+  float: left;
 }
 
 #signup .register label {
-    float: left;
-    color: #fff;
-    
-	font: 300 13px/18px "Kanit", sans-serif;
-    text-align: left;
+  float: left;
+  color: #fff;
 
-    margin-top: 14px;
-    margin-left: 15px;
-    max-width: 350px;
-}
+  font: 300 13px/18px "Kanit", sans-serif;
+  text-align: left;
 
-#signup .submit-container{
-	margin: 0px auto;
-    clear: both;
-    padding-top: 20px;
-    width: 323px;
-}
-
-#signup #input-newsletter{
-	width: 323px;
-	height: 60px;
-	background: #00101d;
-	border: 1px solid #2c6f98;
-	font: 500 22px/25px "Kanit", sans-serif;
-	text-transform: uppercase;
-	color: #fff;
-	cursor: pointer;
+  margin-top: 14px;
+  margin-left: 15px;
+  max-width: 350px;
 }
 
 .tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted #252835;
-    margin-left: 5px;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #252835;
+  margin-left: 5px;
 }
 
 .tooltiptext {
-    visibility: hidden;
-    width: 320px;
-    background-color: rgba(21,39,53,0.9);
-	border: 1px solid rgba(255,255,255,0.8);
-    color: #fff;
-    font-size: 11px;
-    text-align: left;
-    padding: 12px;
-    border-radius: 5px;
-    position: absolute;
-    z-index: 1;
+  visibility: hidden;
+  width: 320px;
+  background-color: rgba(21, 39, 53, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #fff;
+  font-size: 11px;
+  text-align: left;
+  padding: 12px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
 }
 
 .tooltip:hover .tooltiptext {
-	visibility: visible;
+  visibility: visible;
 }
-  
+
 .modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    max-width: 100%;
-    min-height: 350px;
-    max-height: 100%;
-    background: white;
-    z-index: 1010;
-    padding-top: 150px;
-    color: #fff;
-    border: 1px solid #272f38;
-    box-shadow: 0 0 15px #000;
-    text-align: center;
-    background: #0e1721 url(https://webcdn.triongames.com/landingpages/skydome/assets/images/confirmation/modal-background.jpg) no-repeat center top;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 100%;
+  min-height: 350px;
+  max-height: 100%;
+  background: white;
+  z-index: 1010;
+  padding-top: 150px;
+  color: #fff;
+  border: 1px solid #272f38;
+  box-shadow: 0 0 15px #000;
+  text-align: center;
+  background: #0e1721
+    url(https://webcdn.triongames.com/landingpages/skydome/assets/images/confirmation/modal-background.jpg)
+    no-repeat center top;
 }
 
 .modal h2 {
-    font-size: 31px;
-    margin-bottom: 11px;
-    font-weight: 700;
+  font-size: 31px;
+  margin-bottom: 11px;
+  font-weight: 700;
 }
 
 .modal p {
-    padding: 10px;
+  padding: 10px;
 }
 
 .modal button {
-    padding: 8px 30px;
+  padding: 8px 30px;
 }
 
 .modal-overlay {
-    display: none;
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
+  display: none;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .modal.open,
-.modal-overlay.open{
-		display: block;
+.modal-overlay.open {
+  display: block;
 }
 
-@media screen and (max-width:768px){
-	#signup p{
-		font-size: 1.1rem;
-		line-height: 1.4rem;
-		font-weight: 300;
-	}
+@media screen and (max-width: 768px) {
+  #signup p {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    font-weight: 300;
+  }
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width: 600px) {
+  #signup .register {
+    width: 100%;
+    max-width: 420px;
+    height: 570px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-left: 0;
+    margin-top: 250px;
+  }
 
-	#signup .register{
-		width: 100%;
-		max-width: 420px;
-		height: 570px;
-		left: 50%;
-		transform: translate(-50%, 0%);
-		margin-left: 0;
-		margin-top: 250px;
-	}
+  #signup .register::before {
+    width: 100%;
+    height: 570px;
+  }
 
-	#signup .register::before{
-		width: 100%;
-		height: 570px;
-	}
+  #signup .register h4 {
+    font: 600 2rem / 2.5rem "Kanit", sans-serif;
+  }
 
-	#signup .register h4{
-		font: 600 2rem / 2.5rem "Kanit", sans-serif;
-	}
+  #signup .register h4 span {
+    font-size: 3.2rem;
+  }
 
-	#signup .register h4 span{
-		font-size: 3.2rem;
-	}
+  #signup .register p {
+    font-size: 1rem;
+  }
 
-	#signup .register p{
-		font-size: 1rem;
-	}
+  #signup .email-input {
+    width: 90%;
+    font: 400 15px/18px "Kanit", sans-serif;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 20px 0 10px;
+  }
 
-	#signup .email-input{
-		width: 90%;
-		font: 400 15px/18px "Kanit", sans-serif;
-		left: 50%;
-		transform: translate(-50%,0);
-		margin: 20px 0 10px;
-	}
+  #signup .register .confirmation-box {
+    height: 20px;
+    width: 20px;
+  }
 
-	#signup .register .confirmation-box {
-		height: 20px;
-		width: 20px;
-	}
-
-	#signup .register label {
-		font: 300 13px/18px "Kanit", sans-serif;
-		max-width: 90%;
-	}
+  #signup .register label {
+    font: 300 13px/18px "Kanit", sans-serif;
+    max-width: 90%;
+  }
 }
 
-@media screen and (max-width:480px){
-	#signup{
-		height: auto;
-		padding-bottom: 140px;
-		padding-top: 40px;
-	}
+@media screen and (max-width: 480px) {
+  #signup {
+    height: auto;
+    padding-bottom: 140px;
+    padding-top: 40px;
+  }
 
-	#signup .register{
-		width: 100%;
-		max-width: 420px;
-		height: auto;
-		left: 0%;
-		margin-left: 0;
-		margin-top: 75px;
-		transform: translate(0,0);
-	}
+  #signup .register {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    left: 0%;
+    margin-left: 0;
+    margin-top: 75px;
+    transform: translate(0, 0);
+  }
 
-	#signup .register::before{
-		width: 100%;
-		height: 650px;
-	}
+  #signup .register::before {
+    width: 100%;
+    height: 650px;
+  }
 
-	#signup .register .confirmation-box {
-		height: 10px;
-		width: 10px;
-	}
+  #signup .register .confirmation-box {
+    height: 10px;
+    width: 10px;
+  }
 
-	#signup .register label{
-		max-width: 85%;
-	}
-
-	#signup .submit-container {
-		margin: 0px 5%;
-		width: 90%;
-	}
-
-	#signup #input-newsletter {
-		width: 100%;
-		height: auto;
-		padding: 10px;
-	}
+  #signup .register label {
+    max-width: 85%;
+  }
 }
 /* -------------- features --------------- */
 
-#features{
-    background: #122736 url('https://webcdn.triongames.com/landingpages/skydome/assets/images/background/background-features.jpg') no-repeat center top/cover;
-    min-height: 950px;
-    padding-top: 100px;
+#features {
+  background: #122736
+    url("https://webcdn.triongames.com/landingpages/skydome/assets/images/background/background-features.jpg")
+    no-repeat center top/cover;
+  min-height: 950px;
+  padding-top: 100px;
 }
 
-#features h1{
-	/*margin: 125px 0 75px;
+#features h1 {
+  /*margin: 125px 0 75px;
 	padding-bottom: 20px;
     border-bottom: 1px solid #2C6F98;*/
 }
 
-#features h1 span{
-	display: block;
-    font-size: 3rem;
-    line-height: 2.25rem;
+#features h1 span {
+  display: block;
+  font-size: 3rem;
+  line-height: 2.25rem;
 }
 
-#features .header{
-	margin-bottom: 50px;
+#features .header {
+  margin-bottom: 50px;
 }
 
-.feature-container{
-	position: relative;
-	width: 1375px;
-	height: 600px;
+.feature-container {
+  position: relative;
+  width: 1375px;
+  height: 600px;
 }
 
-.feature-container svg{
-    position: absolute;
-	top: 10px;
-    left: -10px;
-    z-index: 10;
+.feature-container svg {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  z-index: 10;
 }
 
-.feature-container img{
-    position: absolute;
-    left: 0;
-    z-index: 5;
+.feature-container img {
+  position: absolute;
+  left: 0;
+  z-index: 5;
 }
 
 .accordion {
-    width: 100%;
-    max-width: 450px;
-    margin: 30px auto 20px;
-    background: transparent;
-    position: absolute;
-	top: 55px;
-    right: 60px;
-    z-index: 15;
+  width: 100%;
+  max-width: 450px;
+  margin: 30px auto 20px;
+  background: transparent;
+  position: absolute;
+  top: 55px;
+  right: 60px;
+  z-index: 15;
 }
-  
+
 .accordion .link {
-    cursor: pointer;
-    display: block;
-    padding: 15px 15px 15px 42px;
-    color: #fff;
-	font: 500 21px/25px "Kanit", sans-serif;
-    border-bottom: 1px solid #BE8436;
-    position: relative;
-    -webkit-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+  cursor: pointer;
+  display: block;
+  padding: 15px 15px 15px 42px;
+  color: #fff;
+  font: 500 21px/25px "Kanit", sans-serif;
+  border-bottom: 1px solid #be8436;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
-  
-.accordion li:last-child .link { border-bottom: 0; }
-  
-.accordion li{
-	list-style: none;
-	padding-bottom: 10px;
+
+.accordion li:last-child .link {
+  border-bottom: 0;
+}
+
+.accordion li {
+  list-style: none;
+  padding-bottom: 10px;
 }
 
 .accordion li i {
-    position: absolute;
-    top: 12px;
-    left: 0px;
-    -webkit-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+  position: absolute;
+  top: 12px;
+  left: 0px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 
-	background-image: url('https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-spritesheet.png');
-	width: 30px;
-	height: 30px;
+  background-image: url("https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-spritesheet.png");
+  width: 30px;
+  height: 30px;
 }
 
-.icon-strategy{
-	background-position: 0 0;
+.icon-strategy {
+  background-position: 0 0;
 }
-.icon-champions{
-	background-position: -30px 0;
+.icon-champions {
+  background-position: -30px 0;
 }
-.icon-intervention{
-	background-position: -60px 0;
+.icon-intervention {
+  background-position: -60px 0;
 }
-.icon-matches{
-	background-position: -90px 0;
+.icon-matches {
+  background-position: -90px 0;
 }
-.icon-invasion{
-	background-position: -120px 0;
+.icon-invasion {
+  background-position: -120px 0;
 }
 
 .accordion li .chevron-down {
-    right: 12px;
-    left: auto;
-    font-size: 26px;
-    font-style: unset;
-    color: #BE8436;
-    background: none;
+  right: 12px;
+  left: auto;
+  font-size: 26px;
+  font-style: unset;
+  color: #be8436;
+  background: none;
 }
-  
-  /*.accordion li.open .link { color: #b63b4d; }
+
+/*.accordion li.open .link { color: #b63b4d; }
   
   .accordion li.open i { color: #b63b4d; }*/
-  
-.accordion li .chevron-down::before{
-	content: '+';
+
+.accordion li .chevron-down::before {
+  content: "+";
 }
-.accordion li.open .chevron-down::before{
-	content: '-';
+.accordion li.open .chevron-down::before {
+  content: "-";
 }
-  
+
 .desc {
+  display: none;
+  color: #fff;
+  font: 300 18px/21px "Kanit", sans-serif;
+  padding: 20px;
+}
+
+@media screen and (min-width: 1600px) {
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1599px) {
+}
+
+@media screen and (max-width: 1439px) {
+  #features {
+    min-height: 850px;
+  }
+
+  .feature-container {
+    width: 1150px;
+    height: 540px;
+  }
+
+  .feature-container svg {
+    width: 1370px;
+    height: 600px;
+    transform: scale(0.85);
+    left: -120px;
+    top: -40px;
+  }
+
+  .feature-container img {
+    width: 660px;
+    top: 20px;
+  }
+
+  .accordion {
+    width: 400px;
+    top: 0px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .feature-container {
+    transform: scale(0.8);
+    margin-left: -105px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .feature-container {
+    transform: scale(0.6);
+    margin-left: -225px;
+    top: -120px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .feature-container {
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    margin: 0px auto;
+    top: auto;
+  }
+
+  #features h1 span {
+    display: inline;
+  }
+
+  .feature-container svg {
     display: none;
-    color: #fff;
-    font: 300 18px/21px "Kanit", sans-serif;
-    padding: 20px;
-}
-  
+  }
 
+  .feature-container img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 20px;
+    margin-bottom: 50px;
+  }
 
-@media screen and (min-width: 1600px){
-
-}
-
-@media screen and (min-width:1440px) and (max-width: 1599px){
-
-}
-
-@media screen and (max-width: 1439px){
-	#features{
-		min-height: 850px;
-	}
-
-	.feature-container{
-		width: 1150px;
-		height: 540px;
-	}
-
-	.feature-container svg{
-		width: 1370px;
-		height: 600px;
-		transform: scale(0.85);
-		left: -120px;
-		top: -40px;
-	}
-
-	.feature-container img{
-		width: 660px;
-		top: 20px;
-	}
-
-	.accordion{
-		width: 400px;
-		top: 0px;
-	}
+  #accordion {
+    position: relative;
+    right: auto;
+    max-width: inherit;
+    width: 90%;
+    margin: 0px auto;
+  }
+  .accordion .link {
+    padding: 15px 25px 15px 42px;
+  }
 }
 
-@media screen and (max-width: 1199px){
-	.feature-container{
-		transform: scale(0.8);
-		margin-left: -105px;
-	}
-}
-
-@media screen and (max-width: 991px){
-	.feature-container {
-		transform: scale(0.6);
-		margin-left: -225px;
-		top: -120px;
-	}
-}
-
-@media screen and (max-width: 767px){
-	.feature-container{
-		width: 100%;
-		height: auto;
-		transform: scale(1);
-		margin: 0px auto;
-		top: auto;
-	}
-
-	#features h1 span{
-		display: inline;
-	}
-
-	.feature-container svg{
-		display: none;
-	}
-
-	.feature-container img {
-		position: relative;
-		width: 100%;
-		height: auto;
-		top: 20px;
-		margin-bottom: 50px;
-	}
-
-	#accordion{
-		position: relative;
-		right: auto;
-		max-width: inherit;
-		width: 90%;
-		margin: 0px auto;
-	}
-	.accordion .link{
-		padding: 15px 25px 15px 42px;
-	}
-}
-
-@media screen and (max-width: 479px){
-	.accordion li .chevron-down {
-		right: -12px;
-	}
+@media screen and (max-width: 479px) {
+  .accordion li .chevron-down {
+    right: -12px;
+  }
 }
 
 /* -------------- media section --------------- */
 
-#media{
-    background: #122736 url() no-repeat center top/cover;
-    min-height: 700px;
-    padding-top: 50px;
+#media {
+  background: #122736 url() no-repeat center top/cover;
+  min-height: 700px;
+  padding-top: 50px;
 }
 
 #media::before {
-	content: ' ';
-	display: block;
-	position: absolute;
-	left: 0%;
-	top: 0%;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-    background: url('https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-logo-symbol-blue.svg') center center / cover no-repeat transparent;
-    background-size: 80%;
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background: url("https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-logo-symbol-blue.svg")
+    center center / cover no-repeat transparent;
+  background-size: 80%;
 }
 
-#media h1{
-	text-align: center;
+#media h1 {
+  text-align: center;
 }
 
-svg{
-	width: 100%;
-	height: 100%;
+svg {
+  width: 100%;
+  height: 100%;
 }
 
 .slick-slide img,
 .slick-slide svg {
-	opacity: 0.8;
-	transition: all 300ms ease;
-	width: 100%;
-	height: auto;
+  opacity: 0.8;
+  transition: all 300ms ease;
+  width: 100%;
+  height: auto;
 
-	margin: 45px;
-	padding: 0% 5%;
-	position: relative;
-	text-align: center;
-  }
+  margin: 45px;
+  padding: 0% 5%;
+  position: relative;
+  text-align: center;
+}
 
 .slick-center img,
-.slick-center svg{
-	-moz-transform: scale(1.15);
-	-ms-transform: scale(1.15);
-	-o-transform: scale(1.15);
-	-webkit-transform: scale(1.15);
-	color: #e67e22;
-	opacity: 1;
-	transform: scale(1.15);
-  }
-
-.splide__track{
-	padding: 20px;
+.slick-center svg {
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+  color: #e67e22;
+  opacity: 1;
+  transform: scale(1.15);
 }
 
-
-.splide__slide{
-	opacity: 0.8;
-	transition: all 300ms ease;
+.splide__track {
+  padding: 20px;
 }
 
-.splide__slide.is-active.is-visible{
-	/*-moz-transform: scale(1.15);
+.splide__slide {
+  opacity: 0.8;
+  transition: all 300ms ease;
+}
+
+.splide__slide.is-active.is-visible {
+  /*-moz-transform: scale(1.15);
 	-ms-transform: scale(1.15);
 	-o-transform: scale(1.15);
 	-webkit-transform: scale(1.15);
 	transform: scale(1.15);*/
-	opacity: 1;	
+  opacity: 1;
 }
 
-.screenshots a{
-	display: block;
+.screenshots a {
+  display: block;
 }
 
-.screenshot::before{
-	content: '';
-	position: absolute;
-	top: 10px;
-	left: -10px;
-	width: 786px;
-	height: 433px;
-	background: url('https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-image-border.svg') no-repeat center top/cover;
-	z-index: 10;
+.screenshot::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 786px;
+  height: 433px;
+  background: url("https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-image-border.svg")
+    no-repeat center top/cover;
+  z-index: 10;
 }
 
 .slick-dotted.slick-slider {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .slick-dots {
-    position: absolute;
-    bottom: -50px;
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-	z-index: 10;
+  position: absolute;
+  bottom: -50px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  z-index: 10;
 }
 
 .slick-dots li {
-    position: relative;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin: 0 5px;
-    padding: 0;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
 }
 
 .slick-dots li button {
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    cursor: pointer;
-    color: transparent;
-    border: 0;
-    outline: none;
-    background: transparent;
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
 }
 
 .slick-dots li button:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    opacity: .25;
-	background-image: url('https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-spritesheet.png');
-	background-position: -35px -78px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  opacity: 0.25;
+  background-image: url("https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-spritesheet.png");
+  background-position: -35px -78px;
 }
 
 .slick-dots li.slick-active button:before {
-    opacity: .75;
-	background-position: 0px -78px;
+  opacity: 0.75;
+  background-position: 0px -78px;
 }
 
-.splide__pagination{
-	bottom: -2.5em;
+.splide__pagination {
+  bottom: -2.5em;
 }
 
-.splide__pagination__page{
-	display: inline-block;
-	width: 35px;
-	height: 35px;
-	background: none;
-	border-radius: 0;
-	margin: 3px;
-	padding: 0;
-	transition: transform .2s linear;
-	border: none;
-	opacity: .7;
+.splide__pagination__page {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: none;
+  border-radius: 0;
+  margin: 3px;
+  padding: 0;
+  transition: transform 0.2s linear;
+  border: none;
+  opacity: 0.7;
 
-	background-image: url('https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-spritesheet.png');
-	background-position: -35px -78px;
+  background-image: url("https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-spritesheet.png");
+  background-position: -35px -78px;
 }
 
-.splide__pagination__page.is-active{
-	background-color: transparent;
-	background-image: url('https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-spritesheet.png');
-	background-position: 0px -78px;
-	opacity: 1.0;
+.splide__pagination__page.is-active {
+  background-color: transparent;
+  background-image: url("https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-spritesheet.png");
+  background-position: 0px -78px;
+  opacity: 1;
 }
 
-img.screen{
-	mask-image: url('https://assets.landingpages.gamigo.com/assets/skydome/skydome-image-mask.svg');
-	mask-size: 90%;
-	mask-repeat: no-repeat;
-	mask-position: center;
-	-webkit-mask-image: url('https://assets.landingpages.gamigo.com/assets/skydome/skydome-image-mask.svg');
-	-webkit-mask-size: 90%;
-	-webkit-mask-repeat: no-repeat;
-	-webkit-mask-position: center;
+img.screen {
+  mask-image: url("https://assets.landingpages.gamigo.com/assets/skydome/skydome-image-mask.svg");
+  mask-size: 90%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("https://assets.landingpages.gamigo.com/assets/skydome/skydome-image-mask.svg");
+  -webkit-mask-size: 90%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 
-img.screen-border{
-	position: absolute; top: -35px; left: -10px; z-index: 1;
+img.screen-border {
+  position: absolute;
+  top: -35px;
+  left: -10px;
+  z-index: 1;
 }
 
-img.screen-border{
-	position: absolute;
-	top: 33px;
-	left: 30px;
-	z-index: 1;
-	width: 90%;
+img.screen-border {
+  position: absolute;
+  top: 33px;
+  left: 30px;
+  z-index: 1;
+  width: 90%;
 }
 
-.slick-slide a{
-	display: block;
-    width: 100%;
-    height: 100%;
+.slick-slide a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
-
-@media screen and (min-width: 1600px){
-
+@media screen and (min-width: 1600px) {
 }
 
-@media screen and (min-width:1440px) and (max-width: 1599px){
-
+@media screen and (min-width: 1440px) and (max-width: 1599px) {
 }
 
-@media screen and (min-width:1200px) and (max-width: 1439px){
-
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
 }
 
-@media screen and (max-width: 1199px){
-	
+@media screen and (max-width: 1199px) {
 }
 
-@media screen and (max-width: 991px){
-	#media{
-		padding-top: 0px;
-	}
+@media screen and (max-width: 991px) {
+  #media {
+    padding-top: 0px;
+  }
 }
 
-@media screen and (max-width: 768px){
-	#media{
-		padding-top: 100px;
-	}
+@media screen and (max-width: 768px) {
+  #media {
+    padding-top: 100px;
+  }
 
-	/*.screenshots a{
+  /*.screenshots a{
 		display: block;
 		width: 100%;
 	}
@@ -1587,563 +1605,652 @@ img.screen-border{
 	}*/
 }
 
-@media screen and (max-width: 600px){	
-
+@media screen and (max-width: 600px) {
 }
 
-@media screen and (min-width:480px) and (max-width: 649px){
-
+@media screen and (min-width: 480px) and (max-width: 649px) {
 }
 
-@media screen and (max-width: 479px){
-	.splide__list{
-		width: 100%;
-	}
+@media screen and (max-width: 479px) {
+  .splide__list {
+    width: 100%;
+  }
 
-	.splide__track{
-		padding: 0;
-	}
+  .splide__track {
+    padding: 0;
+  }
 
-	img.screen{
-		width: 100%;
-		margin-left: 0%;
-	}
+  img.screen {
+    width: 100%;
+    margin-left: 0%;
+  }
 
-	img.screen-border {
-		position: absolute;
-		top: 7%;
-		left: 12px;
-		z-index: 1;
-		width: 90%;
-	}
+  img.screen-border {
+    position: absolute;
+    top: 7%;
+    left: 12px;
+    z-index: 1;
+    width: 90%;
+  }
 }
 
 /* ------------- social media ---------- */
 
-#socialmedia{
-    background: #122736 url('https://webcdn.triongames.com/landingpages/skydome/assets/images/background/background-social.jpg') no-repeat center top/cover;
-    min-height: 950px;
-    padding-top: 200px;
+#socialmedia {
+  background: #122736
+    url("https://webcdn.triongames.com/landingpages/skydome/assets/images/background/background-social.jpg")
+    no-repeat center top/cover;
+  min-height: 950px;
+  padding-top: 200px;
 }
 
-#socialmedia::after{
-	content: '';
-	background: transparent url('https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-divider-symbol.svg') no-repeat center top/cover;
-	width: 60px;
-	height: 30px;
-	position: absolute;
-	bottom: -15px;
-	left: 50%;
-	margin-left: -30px;
-	z-index: 10;
+#socialmedia::after {
+  content: "";
+  background: transparent
+    url("https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-divider-symbol.svg")
+    no-repeat center top/cover;
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  margin-left: -30px;
+  z-index: 10;
 }
 
-.followus{
-	display: flex;
-	align-items: center;
+.followus {
+  display: flex;
+  align-items: center;
 }
 
-.followus .headline{
-	display: inline-block;
-	font: italic 600 63px/66px "Kanit", sans-serif;
-	color: #be8436;
+.followus .headline {
+  display: inline-block;
+  font: italic 600 63px/66px "Kanit", sans-serif;
+  color: #be8436;
 }
 
-.followus .divider{
-	margin: 20px auto 10px 40px;
-	width: 35%;
+.followus .divider {
+  margin: 20px auto 10px 40px;
+  width: 35%;
 }
 
-.followus .divider img{
-	margin: 0px;
+.followus .divider img {
+  margin: 0px;
 }
 
 .followus .divider::before {
-    width: 0px;
+  width: 0px;
 }
 
 .followus .divider::after {
-    content: "";
-    width: 80%;
-    background: #be8436;
-    height: 1px;
-    position: absolute;
-    right: 10%;
-    top: 13px;
+  content: "";
+  width: 80%;
+  background: #be8436;
+  height: 1px;
+  position: absolute;
+  right: 10%;
+  top: 13px;
 }
 
-.social-follow{
-	display: flex;
+.social-follow {
+  display: flex;
 }
 
-.social-follow a{
-	margin: 15px;
+.social-follow a {
+  margin: 15px;
 }
 
-.signup-now{
-	width: 323px;
-    height: 60px;
-	background: #00101d;
-	border: 1px solid #2c6f98;
-    font: 500 22px / 25px Kanit, sans-serif;
-    text-transform: uppercase;
-    color: #fff;
-    margin: 50px auto 0;
-    text-align: center;
-    padding-top: 16px;
-	cursor: pointer;
+.signup-now {
+  width: 323px;
+  height: 60px;
+  background: #00101d;
+  border: 1px solid #2c6f98;
+  font: 500 22px / 25px Kanit, sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 50px auto 0;
+  text-align: center;
+  padding-top: 16px;
+  cursor: pointer;
 }
 
-.social-game{
-    padding-bottom: 1em;
+.social-game {
+  padding-bottom: 1em;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#social-media{
-    position: fixed;
-    top: 32vh; 
-    right: 10px;
-    display: flex;
-	flex-direction: column;
-    z-index: 25;
+#social-media {
+  position: fixed;
+  top: 32vh;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 25;
 }
 
 #social-media .smi,
 .social-follow .smi,
-.social-game .smi{
-	width: 45px;
-	height: 45px;
-	background: transparent url('https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-spritesheet.png') no-repeat;
-	display: block;
-	opacity: 0.85;
-	-webkit-transition: opacity 0.25s ease-in-out;
-    -moz-transition: opacity 0.25s ease-in-out;
-    transition: opacity 0.25s ease-in-out;
+.social-game .smi {
+  width: 45px;
+  height: 45px;
+  background: transparent
+    url("https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-spritesheet.png")
+    no-repeat;
+  display: block;
+  opacity: 0.85;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 
-.social-game .smi{
-	transform: scale(0.7);
+.social-game .smi {
+  transform: scale(0.7);
 }
 
 #social-media .smi:hover,
 .social-follow .smi:hover,
-.social-game .smi:hover{
-	opacity: 1.0;
+.social-game .smi:hover {
+  opacity: 1;
 }
 
 #social-media .soc_fb,
 .social-follow .soc_fb,
-.social-game .soc_fb{
-	background-position: 0 -30px;
+.social-game .soc_fb {
+  background-position: 0 -30px;
 }
 
 #social-media .soc_tw,
 .social-follow .soc_tw,
-.social-game .soc_tw{
-	background-position: -45px -30px;
+.social-game .soc_tw {
+  background-position: -45px -30px;
 }
 
 #social-media .soc_di,
 .social-follow .soc_di,
-.social-game .soc_di{
-	background-position: -90px -30px;
+.social-game .soc_di {
+  background-position: -90px -30px;
 }
 
 #social-media .soc_yt,
 .social-follow .soc_yt,
-.social-game .soc_yt{
-	background-position: -135px -30px;
+.social-game .soc_yt {
+  background-position: -135px -30px;
 }
 
 #social-media .soc_in,
 .social-follow .soc_in,
-.social-game .soc_in{
-	background-position: -180px -30px;
+.social-game .soc_in {
+  background-position: -180px -30px;
 }
 
 #social-media .soc_sr,
 .social-follow .soc_sr,
-.social-game .soc_sr{
-	background-position: -225px -30px;
+.social-game .soc_sr {
+  background-position: -225px -30px;
 }
 
-@media screen and (min-width: 1600px){
-
+@media screen and (min-width: 1600px) {
 }
 
-@media screen and (min-width:1440px) and (max-width: 1599px){
-
+@media screen and (min-width: 1440px) and (max-width: 1599px) {
 }
 
-@media screen and (min-width:1200px) and (max-width: 1439px){
-	.followus .divider{
-		width: 25%;
-	}
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .followus .divider {
+    width: 25%;
+  }
 
-	.followus .divider::after {
-		width: 70%;
-	}
+  .followus .divider::after {
+    width: 70%;
+  }
 }
 
-@media screen and (min-width:992px) and (max-width: 1199px){
-	.followus .headline {
-		font: italic 600 36px/40px "Kanit", sans-serif;
-	}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .followus .headline {
+    font: italic 600 36px/40px "Kanit", sans-serif;
+  }
 
-	.followus .divider{
-		width: 25%;
-	}
+  .followus .divider {
+    width: 25%;
+  }
 
-	.social-follow a {
-		margin: 15px;
-		transform: scale(0.8);
-	}
+  .social-follow a {
+    margin: 15px;
+    transform: scale(0.8);
+  }
 }
 
-@media screen and (max-width: 991px){
-	#social-media{
-		display: none;
-	}
-	
-	.social-game{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding-top: 0.5rem;
-		padding-left: auto;
-	}
+@media screen and (max-width: 991px) {
+  #social-media {
+    display: none;
+  }
 
-	.followus{
-		flex-wrap: wrap;
-	}
+  .social-game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-left: auto;
+  }
 
-	.followus .headline{
-		width: 100%;
-    	text-align: center;
-	}
-	
-	.followus .divider{
-		width: 95%;
-		margin: 20px auto 10px auto;
-	}
+  .followus {
+    flex-wrap: wrap;
+  }
 
-	.followus .divider img {
-		margin: 0px auto;
-	}
+  .followus .headline {
+    width: 100%;
+    text-align: center;
+  }
 
-	.followus .divider::after {
-		content: "";
-		width: 50%;
-		background: #be8436;
-		height: 1px;
-		position: absolute;
-		right: -3%;
-		top: 13px;
-	}
+  .followus .divider {
+    width: 95%;
+    margin: 20px auto 10px auto;
+  }
 
-	.followus .divider::before {
-		content: "";
-		width: 50%;
-		background: #be8436;
-		height: 1px;
-		position: absolute;
-		left: -3%;
-		top: 13px;
-	}
+  .followus .divider img {
+    margin: 0px auto;
+  }
 
-	.social-follow {
-		display: flex;
-		margin: 0px auto;
-	}
+  .followus .divider::after {
+    content: "";
+    width: 50%;
+    background: #be8436;
+    height: 1px;
+    position: absolute;
+    right: -3%;
+    top: 13px;
+  }
+
+  .followus .divider::before {
+    content: "";
+    width: 50%;
+    background: #be8436;
+    height: 1px;
+    position: absolute;
+    left: -3%;
+    top: 13px;
+  }
+
+  .social-follow {
+    display: flex;
+    margin: 0px auto;
+  }
 }
 
-@media screen and (max-width: 767px){
-	#socialmedia{
-		padding-top: 100px;
-	}
+@media screen and (max-width: 767px) {
+  #socialmedia {
+    padding-top: 100px;
+  }
 
-	.social-follow{
-		flex-wrap: wrap;
-		justify-content: center;
-	}
+  .social-follow {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
-@media screen and (min-width:480px) and (max-width: 649px){
-
+@media screen and (min-width: 480px) and (max-width: 649px) {
 }
 
-@media screen and (max-width: 479px){
-	.followus .headline{
-		font: italic 600 45px/50px "Kanit", sans-serif;
-	}
+@media screen and (max-width: 479px) {
+  .followus .headline {
+    font: italic 600 45px/50px "Kanit", sans-serif;
+  }
 
-	.signup-now{
-		width: 90%;
-		height: auto;
-		padding: 16px;
-	}
+  .signup-now {
+    width: 90%;
+    height: auto;
+    padding: 16px;
+  }
 }
 
 /* -------------- legal --------------- */
 
-#legal{
-	color: #fff;
-	padding: 175px 0 50px;
-	font-family: sans-serif;
+#legal {
+  color: #fff;
+  padding: 175px 0 50px;
+  font-family: sans-serif;
 }
 
-#legal h1{
-	font: italic 600 50px / 50px Kanit, sans-serif;
+#legal h1 {
+  font: italic 600 50px / 50px Kanit, sans-serif;
 }
 
-#legal h2{
-	color: #fcfcfc;
-    padding: 15px 0 10px;
-    font-size: 1.6em;
-    font-family: "Kanit", sans-serif;
-    text-shadow: 2px 2px 5px rgb(0 0 0 / 50%);
+#legal h2 {
+  color: #fcfcfc;
+  padding: 15px 0 10px;
+  font-size: 1.6em;
+  font-family: "Kanit", sans-serif;
+  text-shadow: 2px 2px 5px rgb(0 0 0 / 50%);
 }
 
-#legal h3{
-	color: #fff;
-    font-size: 1.1rem;
-    padding: 10px 0;
+#legal h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 10px 0;
 }
 
-#legal h4{
-	color: #fff;
-	font-size: 1rem;
-    padding: 12px 0;
+#legal h4 {
+  color: #fff;
+  font-size: 1rem;
+  padding: 12px 0;
 }
 
-#legal p{
-	padding-bottom: 10px;
+#legal p {
+  padding-bottom: 10px;
 }
 
-#legal a{
-	color: #fcfcfc;
+#legal a {
+  color: #fcfcfc;
 }
 
-#legal ul{
-	margin: 20px;
+#legal ul {
+  margin: 20px;
 }
 
-#legal table{
-	margin: 20px;
+#legal table {
+  margin: 20px;
 }
 
-#legal table th{
-	text-align: left;
+#legal table th {
+  text-align: left;
 }
 
-#legal table td{
-	padding: 3px 6px;
+#legal table td {
+  padding: 3px 6px;
 }
 
-@media screen and (max-width: 768px){
-	#legal h1 {
-		font: italic 600 30px / 30px Kanit, sans-serif;
-	}
+@media screen and (max-width: 768px) {
+  #legal h1 {
+    font: italic 600 30px / 30px Kanit, sans-serif;
+  }
 }
 
 /* -------------- confirmation --------------- */
 
-#confirmation{
+#confirmation {
 }
 
-#confirmation .container{
-	padding-top: 220px;
-	min-height: 850px;
-	max-width: 1200px;
+#confirmation .container {
+  padding-top: 220px;
+  min-height: 850px;
+  max-width: 1200px;
 }
 
 .cchar {
-	background: url(https://webcdn.triongames.com/landingpages/skydome/assets/images/confirmation/confirmation-char.png) no-repeat center top/cover;
-	width: 750px;
-	height: 808px;
-	bottom: 10px;
-	left: -170px;
-	position: absolute;
-	
+  background: url(https://webcdn.triongames.com/landingpages/skydome/assets/images/confirmation/confirmation-char.png)
+    no-repeat center top/cover;
+  width: 750px;
+  height: 808px;
+  bottom: 10px;
+  left: -170px;
+  position: absolute;
 }
 
 #confirmation .container .message {
-    width: 540px;
-    position: absolute;
-    top: 250px;
-    right: -30px;
+  width: 540px;
+  position: absolute;
+  top: 250px;
+  right: -30px;
 }
 
-#confirmation h2{
-	font-size: 4.5em;
+#confirmation h2 {
+  font-size: 4.5em;
 }
 
-#confirmation p{
-	font-size: 20px;
-    color: #ccc;
-}
-}
-
-@media screen and (max-width: 1200px){
-	.cchar{
-		transform: scale(0.75);
-		bottom: -70px;
-	}
-
-	#confirmation .container .message {
-		top: 190px;
-		right: 50%;
-		margin-right: -270px;
-	}
+#confirmation p {
+  font-size: 20px;
+  color: #ccc;
 }
 
-@media screen and (max-width: 768px){
-	.cchar{
-		transform: scale(0.6);
-		bottom: -120px;
-		left: 50%;
-		margin-left: -350px;
-	}
+@media screen and (max-width: 1200px) {
+  .cchar {
+    transform: scale(0.75);
+    bottom: -70px;
+  }
 
-	#confirmation .container .message {
-		width: 480px;
-		top: 150px;
-		right: 50%;
-		margin-right: -240px;
-	}
+  #confirmation .container .message {
+    top: 190px;
+    right: 50%;
+    margin-right: -270px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cchar {
+    transform: scale(0.6);
+    bottom: -120px;
+    left: 50%;
+    margin-left: -350px;
+  }
+
+  #confirmation .container .message {
+    width: 480px;
+    top: 150px;
+    right: 50%;
+    margin-right: -240px;
+  }
 }
 
 /* -------------- footer --------------- */
 
-footer{
-	border-top: 1px solid #be8436;
+footer {
+  border-top: 1px solid #be8436;
 }
 
-.footer-100per{
-    width:100%;
-    background: linear-gradient(to bottom, #13394D, #041924);
-    padding:2%;
-    position:relative
+.footer-100per {
+  width: 100%;
+  background: linear-gradient(to bottom, #13394d, #041924);
+  padding: 2%;
+  position: relative;
 }
-.footer-100per p{
-    font-size:.84em;
-    line-height:1.5em;
-    color:#a6a6a6;
-    text-align:left;
-    padding-top:10px;
-    width:100%!important
+.footer-100per p {
+  font-size: 0.84em;
+  line-height: 1.5em;
+  color: #a6a6a6;
+  text-align: left;
+  padding-top: 10px;
+  width: 100% !important;
 }
-#legal-wrap{
-    margin:0 auto;
-    max-width:1228px;
-    width:96%
+#legal-wrap {
+  margin: 0 auto;
+  max-width: 1228px;
+  width: 96%;
 }
-.footer-logo, .rating, footer .legal, label {
-    display: inline-block;
+.footer-logo,
+.rating,
+footer .legal,
+label {
+  display: inline-block;
 }
-footer .legal{
-    width:69%;
-    position:relative
+footer .legal {
+  width: 69%;
+  position: relative;
 }
-footer .legal p{
-    font-family:'Open Sans',sans-serif
+footer .legal p {
+  font-family: "Open Sans", sans-serif;
 }
-footer .legal ul{
-	list-style: none;
+footer .legal ul {
+  list-style: none;
 }
-footer .legal li{
-	float: left;
-    color: #fff;
-    border-right: 1px solid rgb(67, 86, 81);
-    padding: 0px 10px 5px;
+footer .legal li {
+  float: left;
+  color: #fff;
+  border-right: 1px solid rgb(67, 86, 81);
+  padding: 0px 10px 5px;
 }
-footer .legal li:last-child{
-	border-right: none;
+footer .legal li:last-child {
+  border-right: none;
 }
-footer .legal ul li a{
-	color: #ccc;
-    font-size: 12px;
-    text-decoration: none;
+footer .legal ul li a {
+  color: #ccc;
+  font-size: 12px;
+  text-decoration: none;
 }
-.rating{
-    padding:0;
-    width:30%;
-    text-align:right;
-    vertical-align:top;
-    white-space:nowrap
+.rating {
+  padding: 0;
+  width: 30%;
+  text-align: right;
+  vertical-align: top;
+  white-space: nowrap;
 }
-.legal div:first-child{
-    padding-left:0;
-    border-left:none
+.legal div:first-child {
+  padding-left: 0;
+  border-left: none;
 }
-.footer-logo{
-    height:100px;
-    line-height:100px;
-    max-width:19%;
-    padding: 20px 2%;
-    margin-left: 5px;
+.footer-logo {
+  height: 100px;
+  line-height: 100px;
+  max-width: 19%;
+  padding: 20px 2%;
+  margin-left: 5px;
 }
-.footer-logo:before{
-    content:"";
-    position:absolute;
-    border-left:1px solid #aaa;
-	height: 68px;
+.footer-logo:before {
+  content: "";
+  position: absolute;
+  border-left: 1px solid #aaa;
+  height: 68px;
+  margin-left: -9%;
+  top: 17px;
+}
+.legal .footer-logo:first-child::before {
+  border: none;
+}
+.footer-logo img {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1220px) {
+  .footer-logo {
+    max-width: 18%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .rating,
+  footer .legal {
+    width: 100%;
+    display: block;
+  }
+  .rating {
+    text-align: center;
+  }
+  .footer-logo {
+    max-width: 18%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .footer-logo {
+    max-width: 45%;
+  }
+
+  .footer-logo:before {
+    content: "";
+    position: absolute;
+    border-left: none;
+    height: 68px;
     margin-left: -9%;
     top: 17px;
-}
-.legal .footer-logo:first-child::before{
-    border:none
-}
-.footer-logo img{
-    width:100%;
-	height: auto;
-    position:relative
-}
-
-@media screen and (min-width: 992px) and (max-width: 1220px){
-	.footer-logo{
-    	max-width: 18%;
-	}
-}
-
-@media screen and (max-width:991px){
-    .rating,footer .legal{
-        width:100%;
-        display:block
-    }
-    .rating{
-        text-align:center
-    }
-	.footer-logo{
-		max-width: 18%;
-	}
-}
-
-@media screen and (max-width: 479px){
-	.footer-logo {
-		max-width: 45%;
-	}
-	
-	.footer-logo:before {
-		content: "";
-		position: absolute;
-		border-left: none;
-		height: 68px;
-		margin-left: -9%;
-		top: 17px;
-	}
+  }
 }
 
 /* -------------- beta registration survey --------------- */
 
 #beta-registration {
-	background: #122736 url('https://webcdn.triongames.com/landingpages/skydome/assets/images/background/background-beta-survey.jpg') no-repeat center top/cover;
-    min-height: 870px;
+  background: #122736
+    url("https://webcdn.triongames.com/landingpages/skydome/assets/images/background/background-beta-survey.jpg")
+    no-repeat center top/cover;
+  min-height: 870px;
+  overflow: auto;
 }
 
 #beta-registration .survey {
-	
+  display: flex;
+  flex-flow: column;
+  background: rgb(2, 11, 16);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 11, 16, 1) 0%,
+    rgba(18, 56, 76, 0.616) 50%,
+    rgba(2, 11, 16, 1) 100%
+  );
+  border: 1px solid #00709b;
+  max-width: 786px;
+  height: 827px;
+  padding: 30px;
+  padding-top: 115px;
+  margin: 114px auto 71px auto;
+  text-align: center;
+}
+
+#beta-registration .survey::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -83px;
+  left: calc(50% - 145px);
+  background: transparent
+    url("https://webcdn.triongames.com/landingpages/skydome/assets/images/skydome-logo-symbol-290x178.png")
+    no-repeat center top;
+  width: 290px;
+  height: 178px;
+}
+
+#beta-registration p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #fcfcfc;
+}
+
+#beta-registration .survey-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  margin: 25px 0;
+}
+
+#beta-registration .survey-container {
+  overflow-y: auto;
+  text-align: left;
+  color: #fcfcfc;
+  padding: 25px 0 25px 50px;
+  scrollbar-color: #393e42 transparent;
+}
+
+.survey-answers input {
+  margin: 15px 5px;
+}
+
+#beta-registration ::-webkit-scrollbar {
+  width: 6px;
+}
+
+#beta-registration ::-webkit-scrollbar-track {
+  background: transparent;
+  width: 25px;
+}
+
+#beta-registration ::-webkit-scrollbar-thumb {
+  background: #393e42;
+  border-radius: 6px;
+}
+
+#beta-registration .survey-answers {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0 25px 0;
+}
+
+#beta-registration .survey-answers > div {
+  width: 100%;
+}
+
+#beta-registration .survey-answers.two-col > div {
+  width: 50%;
 }
