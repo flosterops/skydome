@@ -69,6 +69,10 @@ section {
   margin-left: auto;
 }
 
+.hidden {
+  display: none !important;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -2207,12 +2211,23 @@ footer .legal ul li a {
   color: #fcfcfc;
 }
 
+#beta-registration p.intro-text {
+  margin-bottom: 25px;
+}
+
+#beta-registration .survey-loader {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
 #beta-registration .survey-wrapper {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   height: 100%;
-  margin: 25px 0;
+  margin-bottom: 25px;
 }
 
 #beta-registration .survey-container {
