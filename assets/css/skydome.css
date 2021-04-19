@@ -215,6 +215,47 @@ section {
   margin-bottom: 10px;
 }
 
+/* -------------- loader --------------- */
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fcfcfc;
+  border-color: #fcfcfc transparent #fcfcfc transparent;
+  animation: lds-dual-ring 1.6s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------------- buttons --------------- */
+
+.btn {
+  display: block;
+  min-width: 323px;
+  background: #00101d;
+  border: 1px solid #2c6f98;
+  font: 400 22px/60px "Kanit", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
 /* -------------- forms --------------- */
 
 .submit-container {
@@ -235,7 +276,8 @@ section {
   cursor: pointer;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="tel"] {
   color: #fcfcfc;
   border: 1px solid #2c6f98;
   background-color: #00101d;
@@ -2294,9 +2336,9 @@ footer .legal ul li a {
 
 #beta-registration .survey-loader {
   display: flex;
-  flex: 1;
   align-items: center;
   justify-content: center;
+  height: 85%;
 }
 
 #beta-registration .survey-wrapper {
@@ -2349,4 +2391,42 @@ footer .legal ul li a {
 
 #beta-registration .submit-container {
   padding-top: 50px;
+}
+
+#beta-registration .survey-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 75%;
+}
+
+#beta-registration .survey-result h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 0;
+}
+
+#beta-registration .survey-result h2.result {
+  padding-bottom: 50px;
+}
+
+#beta-registration .survey-result.success h2.result {
+  color: #97b43c;
+  font-size: 4.5em;
+}
+
+#beta-registration .survey-result.failure h2.result {
+  color: #d63b39;
+}
+
+#beta-registration .survey-result p {
+  max-width: 514px;
+  padding: 10px 0;
+  letter-spacing: 1px;
+  line-height: 1.7em;
+}
+
+#beta-registration .survey-result .btn {
+  margin-top: 85px;
 }

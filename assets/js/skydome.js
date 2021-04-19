@@ -86,7 +86,7 @@
     // verify answer count
     if (Object.keys(answers).length !== questionsCount) {
       alert("Please, answer all questions first.");
-      //return;
+      return;
     }
 
     // display loader
@@ -101,10 +101,10 @@
       data: JSON.stringify(answers),
     })
       .done(function () {
-        $(".survey-result-success").removeClass("hidden");
+        $(".survey-result.success").removeClass("hidden");
       })
       .fail(function () {
-        $(".survey-result-failure").removeClass("hidden");
+        $(".survey-result.failure").removeClass("hidden");
       })
       .always(function () {
         $(".survey-loader").hide();

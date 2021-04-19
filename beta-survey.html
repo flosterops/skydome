@@ -85,7 +85,7 @@
 			<div class="container">
 				<div class="survey">
 					<div class="survey-loader hidden">
-						<p>Sending request...</p>
+						<div class="lds-dual-ring"></div>
 					</div>
 					<div class="survey-wrapper">
 						<p class="intro-text">
@@ -326,7 +326,7 @@
 										<span>In order to receive the CBT Code please fill in your mobile number</span>
 										<div class="survey-answers">
 											<div>
-												<input type="text" size="50" id="phone" name="phone" required />
+												<input type="tel" size="50" minlength="9" maxlength="14" id="phone" name="phone" pattern="[0-9\-\(\)\s]+" required />
 											</div>
 										</div>
 									</li>
@@ -339,11 +339,19 @@
 							</form>
 						</div>
 					</div>
-					<div class="survey-result-success hidden">
-						<p>SUCCESS</p>
+					<div class="survey-result success hidden">
+						<h2>Registration</h2>
+						<h2 class="result">Successful</h2>
+						<p>You have submitted a successful application for the Skydome Beta.</p>
+						<p>Once we make our selections we will send an invite via SMS or email, be on the lookout.</p>
+						<a href="#" class="btn">Button to go...</a>
 					</div>
-					<div class="survey-result-failure hidden">
-						<p>FAILURE</p>
+					<div class="survey-result failure hidden">
+						<h2>Registration</h2>
+						<h2 class="result">Failure</h2>
+						<p>We are sorry, something went wrong.</p>
+						<p>Please try again later.</p>
+						<a href="/beta-survey.html" class="btn">Back to survey</a>
 					</div>
 				</div>
 			</div>
