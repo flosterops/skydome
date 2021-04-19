@@ -235,6 +235,83 @@ section {
   cursor: pointer;
 }
 
+input[type="text"] {
+  color: #fcfcfc;
+  border: 1px solid #2c6f98;
+  background-color: #00101d;
+  padding: 14px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 30px;
+  margin: 15px 5px;
+  line-height: 27px;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #2c6f98;
+  background-color: #00101d;
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 6px;
+  width: 4px;
+  height: 9px;
+  border: solid #fcfcfc;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  position: relative;
+  padding-left: 30px;
+  margin: 15px 5px;
+  line-height: 27px;
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #2c6f98;
+  border-radius: 16px;
+  background-color: #00101d;
+}
+
+input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 9px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #fcfcfc;
+}
+
 @media screen and (max-width: 480px) {
   .submit-container {
     margin: 0px 5%;
@@ -2268,4 +2345,8 @@ footer .legal ul li a {
 
 #beta-registration .survey-answers.two-col > div {
   width: 50%;
+}
+
+#beta-registration .submit-container {
+  padding-top: 50px;
 }
