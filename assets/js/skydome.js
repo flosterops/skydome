@@ -28,8 +28,11 @@
 })(jQuery, window, document);
 
 (function () {
-  if ($("body").hasClass("require-store-token") && !Cookies.get('trion-store-token')) {
-    alert("Please sign in first");
+  if (
+    $("body").hasClass("require-store-token") &&
+    !Cookies.get("trion-store-token")
+  ) {
+    alert("Please, sign in first");
     window.location.href = "/";
   }
 
@@ -191,6 +194,7 @@
 
     const version = $("input[name=version]").val();
     const language = "en";
+    const storeToken = Cookies.get("trion-store-token");
     const data = $(this).serializeArray();
     const questionsCount = $(".survey-questions > li").length - 1;
     var answers = {};
@@ -206,9 +210,15 @@
         }
       });
 
+    // check store token
+    if (!storeToken) {
+      alert("Please, sign in first");
+      return;
+    }
+
     // verify answer count
     if (Object.keys(answers).length !== questionsCount) {
-      alert("Please, answer all questions first.");
+      alert("Please, answer all questions first");
       return;
     }
 
@@ -216,8 +226,7 @@
     const query = $.param({
       phone: $("input[name=phone]").val(),
       optin: $("input[name=optin]").is(":checked"),
-      storeToken:
-        "aXZ-U3h0SGRjTGVsSTFlNG5JZmZ3THhoQSZkYXRhfnlpNGhhMG1PSjRNQTVzOTlZQ3lZUHc0ZHBQSTdSZE1HZVBoeVZZVWkzMl9ob2pUUE5nS3ZhZFBvdjZBM0hOU01RLVY3bjVtZHNSMmtsZVVtQTYtRVVZUV9ybUFobWM4Z0tlWndlOFlYYTNmUUN4S2dIYzZiM3AtMjhibVdVUjA1Uk1Sckp1SFhYTGJmQnlTdWJvNUF1T3VhQnlrUE9WeGNzX2NQeXJZN1FrWndWX0hWaVZLZ0Yyb2c4VUMtNk5TTkstWmVZdURDemxOcjN2cG81eGM2VEEtMGpGbnVsZEZLeEdlbVpEcDk4dE4wbFoxZnBhY1RiQUZJTV9UeTRWazJOVGRDTTYzNlJNZVdKb1QyNDF4NlpmczJ4LUtQNTFWZ1B6TFF1Wk5HV0Zkb3VQU0hkY29ZRHRFeUMzTDNUTUN2TWhfVU5Qc3BYcTh3RnU1SWxFSEo1QTFaUnBXVE5PaGZQSmVVQmhyaFdDUm1HRW9WbFhoc2puR25fTk5ObjRjMkFSeG5FYXlZZVo4Z04yWHp4b2hUVGQ2MThkbF9ySlRvZmE3SDM3N0RwRHRxbmt1ZjhhSHBPZ3pYTl80SzVyVXNmLUpCMURsSFhzelJnMXF3UDk3NzhmdDhQb0dSeDJUeF9CNEVWRFZHNko0d05lSkVuUHFBa05XN3BOV3o0TjMwM2MxOU1IMHZVQ3NxcWZKd0dHUkw2UQAA",
+      storeToken: storeToken,
     });
 
     // display loader
