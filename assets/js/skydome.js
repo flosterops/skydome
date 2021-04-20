@@ -60,6 +60,119 @@
     xhr.send(data);
   });
 
+  $("#pass-visibility").on("click", function() {
+    const element = $("form#register-form #password");
+    const passwordTypes = element.attr("type");
+    if (passwordTypes === "text") {
+      element.attr("type", "password");
+    } else {
+      element.attr("type", "text");
+    }
+  })
+
+  $("form#register-form").on("submit", function (event) {
+    event.preventDefault();
+
+    const email = $("form#register-form #email").val();
+    const password = $("form#register-form #password").val();
+    const age = $("form#register-form #age").val();
+    const currentYear = new Date().getFullYear();
+    const dob = `${currentYear - age}-12-31`;
+    const registerURl = 'https://glyph.draft.int.one.gamigo.com/api/v1_2/register-account.action';
+    const requestData =
+      `<?xml version="1.0" encoding="UTF-8"?>
+      <accountCreateRequest version="1.2">
+        <account>
+          <firstName> </firstName>
+          <lastName> </lastName>
+          <dateOfBirth>${dob}</dateOfBirth>
+          <countryCode>ua</countryCode>
+          <emailAddress>${email}</emailAddress>
+          <password>${password}</password>
+          <languageCode>en_US</languageCode>
+          <affiliateId></affiliateId>
+          <optInChannels>
+            <channel>skydome</channel>
+          </optInChannels>
+          </account>
+        </accountCreateRequest>`;
+
+    $.ajax({
+      url: registerURl,
+      method: "POST",
+      contentType: "plain/text",
+      data: requestData,
+    }).done(function (data) {
+      if(!!$(data).find("errors").children().toArray().length) {
+        $(data).find("errors").children().toArray().forEach(elem => {
+          console.error('Registration error:' + $(elem).attr('code'))
+        });
+      } else {
+        const storeToken = $(data).find("storeToken").text();
+        Cookies.set('trion-store-token', storeToken);
+      }
+    }).fail(function (e) {
+      console.log(e);
+    }).always(function () {
+    });
+  })
+
+  function validateEmail(value) {
+    // Email reg exp
+    return new RegExp('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$').test(value);
+  }
+
+  function validateAge(value) {
+    return value && value > 0;
+  }
+
+  function validatePassword(value) {
+    const min = 8;
+    const max = 32;
+    const isMoreThanMin = value.length > min - 1;
+    const isLessThanMax = value.length < max - 1;
+    const hasUppercase = new RegExp(/(.*[A-Z].*)/).test(value);
+    const hasSpecialChapter = new RegExp(/(?=.*[-+_!@#$%^&*., ?])/).test(value);
+
+    return isMoreThanMin && isLessThanMax && hasUppercase && hasSpecialChapter;
+  }
+
+  function validateTos(checked) {
+    return !!checked;
+  }
+
+  $("form#register-form #email").on("blur", function (event) {
+    const emailError = $("#email-error");
+
+    if (validateEmail(event.target.value)) {
+      emailError.hide();
+    } else {
+      emailError.show();
+    }
+  })
+
+  $("form#register-form #password").on("blur", function (event) {
+    if (validatePassword(event.target.value));
+  })
+
+  $("form#register-form #age").on("blur", function (event) {
+    const ageError = $("#age-error");
+    if (validateAge(event.target.value)) {
+      ageError.hide();
+    } else {
+      ageError.show();
+    }
+  })
+
+  $("form#register-form #tos").on("change", function (event) {
+    const tosError = $("#tos-error");
+    if (validateTos(event.target.checked)) {
+      tosError.hide();
+    } else {
+      tosError.show();
+    }
+  })
+
   $(document).on("submit", "form#beta-survey-form", function (ev) {
     ev.preventDefault();
 
@@ -188,7 +301,7 @@ $(document).ready(function () {
   });
 
   /*if($(document).width() > "768") {
-    $('.screenshots').slick({  
+    $('.screenshots').slick({
         centerMode: true,
         centerPadding: '500px',
         slidesToShow: 1,

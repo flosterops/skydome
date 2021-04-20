@@ -1,0 +1,317 @@
+.reg-container {
+    padding: 45px 0 0;
+    background-image: url("https://webcdn.triongames.com/landingpages/skydome/assets/images/background/background-beta-survey.jpg");
+    height: 1112px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.reg-container .reg-divider {
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    bottom: -15px;
+    left: calc(50% - 30px);
+    z-index: 2;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    position: relative;
+}
+
+.reg-content {
+    max-width: 1600px;
+    padding: 0 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.reg-logo-container {
+    width: 50%;
+
+}
+
+.reg-logo {
+    width: 100%;
+    z-index: 4;
+}
+
+.reg-content .trailer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: auto;
+    top: 161px;
+    left: 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.reg-content .trailer .trailer-description {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 600;
+    position: absolute;
+    text-align: center;
+    z-index: 4;
+    bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+
+.reg-content .trailer img {
+    width: 80%;
+    mask-image: url("https://assets.landingpages.gamigo.com/assets/skydome/skydome-image-mask.svg");
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-image: url("https://assets.landingpages.gamigo.com/assets/skydome/skydome-image-mask.svg");
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+#register-form {
+    opacity: 1;
+    padding: 72px 55px;
+    margin: 135px 0 0 100px;
+    /*height: 720px;*/
+    position: relative;
+    /*border: 1px solid #00709B;*/
+    /*background: rgba(0, 0, 0, 0.8);*/
+}
+
+#register-form .reg-form-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#register-form input[type="text"],
+#register-form input[type="password"],
+#register-form input[type="email"],
+#register-form input[type="number"] {
+    width: 100%;
+    display: block;
+    font: 400 15px/18px "Kanit", sans-serif;
+    border: 1px solid #00709B;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 20px;
+    margin-top: 10px;
+}
+
+
+#register-form input[type="checkbox"] {
+    display: none;
+}
+
+#register-form input[type="checkbox"] + label {
+    padding-left: 30px;
+    /*margin: 15px 5px;*/
+    /*line-height: 27px;*/
+}
+
+#register-form input[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #2c6f98;
+    background-color: #00101d;
+}
+
+#register-form input[type="checkbox"]:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 1px;
+    width: 4px;
+    height: 9px;
+    border: solid #fcfcfc;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#register-form label {
+    color: #fff;
+}
+
+#register-form .reg-form-group {
+    margin-bottom: 47px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#register-form .password-container {
+    flex-direction: row;
+    align-items: flex-end;
+    width: 70%;
+}
+
+#pass-visibility {
+    height: 50px;
+    margin-left: 10px;
+}
+
+#register-form .age-container {
+    width: 20%;
+}
+
+#register-form .pass-form-group {
+    justify-content: space-between;
+}
+
+#register-form .checkbox-container {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+#register-form .checkbox-container a {
+    color: #2c6f98;
+}
+
+#register-form .checkbox-container label {
+    font-size: 12px;
+}
+
+#register-form button[type="submit"] {
+    width: 323px;
+    height: 60px;
+    background: #00101d;
+    border: 1px solid #2c6f98;
+    font: 500 22px/25px "Kanit", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}
+
+#register-form .reg-submit-container {
+    align-items: center;
+    margin-top: 50px;
+}
+
+#register-form .sign-in-container {
+    margin-bottom: 70px;
+    justify-content: center;
+}
+
+.reg-aside {
+    height: 942px;
+    justify-content: space-between;
+}
+
+.screenshot-container p {
+    text-align: right;
+    font: italic 600 30px / 30px Kanit, sans-serif;
+    text-transform: uppercase;
+    font-style: italic;
+    color: #fff;
+    letter-spacing: .7px;
+}
+
+.screenshot-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0 0 30px;
+}
+
+.screenshot-wrapper  img.screen-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.screenshot-wrapper .screen-container {
+    width: 40%;
+    min-width: 272px;
+    mask-image: url("https://assets.landingpages.gamigo.com/assets/skydome/skydome-image-mask.svg");
+    mask-size: 90%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-image: url("https://assets.landingpages.gamigo.com/assets/skydome/skydome-image-mask.svg");
+    -webkit-mask-size: 90%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+.screenshot-container .screens-logo-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+.screenshot-container .screens-logo-wrapper img {
+    width: 45px;
+    height: 24px;
+}
+
+.screenshot-container .screens-logo-wrapper .blue-stick {
+    width: 57.5%;
+    height: 1px;
+    background: #2c6f98;
+}
+
+.screenshot-wrapper .screen-container img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.screenshot-wrapper:nth-child(n) {
+    margin-right: 30px;
+}
+
+.screenshot-wrapper:last-child {
+    margin-right: 0;
+}
+
+#register-form .error {
+    color: #a00;
+    display: none;
+    position: absolute;
+    bottom: -25px;
+    z-index: 1;
+    font-size: 13px;
+}
+
+#register-form #age-error {
+    left: -16px;
+    white-space: normal;
+}
+
+#register-form #tos-error {
+    left: 30px;
+    bottom: -15px;
+}
+
+#register-form .sign-in-container {
+    margin-top: 15px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+#register-form .sign-in-container a {
+    color: #2c6f98;
+    cursor: pointer;
+}
