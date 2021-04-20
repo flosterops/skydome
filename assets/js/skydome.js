@@ -95,7 +95,6 @@
             <channel>skydome</channel>
           </optInChannels>
           </account>
-          <g-recaptcha-response>03AGdBq25IS8uv3saWLjHJ60Ag1J6eucuPoW6juz_aITEHVZ3eXze0RVQxd99rVaP3D8Fa2i3hirpTHcyKh_o_4jSOFloWwNRSHDrOnqdBVlgtOaQhLaQHIe9vFVqWUxT59yHLGtqzDC-MgDhXnsMTyTzSjfHvpE19KmNOuvLJqTuwgfHwOFETqqI0st3X5iq1GgfmYojMpNgUHSZrGrzP0hu2Qre43HXiClMl2yPbnu1WYKpwOrs2W1iT0JKMLwiUul7LL5ytggYW12zxEcrMqnAeeJBDaE68SS-fhdjWSJzpuYdKzWpr3xlM8qkmGt0D3E2t6t6_oRkKjvnBCdTgQ-ipmCaLaFscXP_ya-QeyYbMB46jiNk5XBR0usiZGZETu3n6OolXvvC51-bTifdFcJmH87Pw7N8LtETFyW8nbYIjm3S5GM8yqI-7S0yotkRgfMCmK4YQcxXUIFKUJ-mEkn91iSfVsSOe7w</g-recaptcha-response>
         </accountCreateRequest>`;
 
     $.ajax({
