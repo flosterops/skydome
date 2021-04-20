@@ -2305,8 +2305,7 @@ footer .legal ul li a {
   border: 1px solid #00709b;
   max-width: 786px;
   height: 827px;
-  padding: 30px;
-  padding-top: 115px;
+  padding: 115px 30px 30px 30px;
   margin: 114px auto 71px auto;
   text-align: center;
 }
@@ -2357,8 +2356,13 @@ footer .legal ul li a {
   scrollbar-color: #393e42 transparent;
 }
 
-.survey-answers input {
+#beta-registration .survey-answers input {
   margin: 15px 5px;
+}
+
+#beta-registration .survey-answers input[type="text"],
+#beta-registration .survey-answers input[type="tel"] {
+  width: 60%;
 }
 
 #beta-registration ::-webkit-scrollbar {
@@ -2429,4 +2433,21 @@ footer .legal ul li a {
 
 #beta-registration .survey-result .btn {
   margin-top: 85px;
+}
+
+@media screen and (max-width: 768px) {
+  #beta-registration .survey-container {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #beta-registration .survey {
+    padding: 115px 15px 20px 15px;
+  }
+
+  #beta-registration .survey-answers input[type="text"],
+  #beta-registration .survey-answers input[type="tel"] {
+    width: 90%;
+  }
 }
