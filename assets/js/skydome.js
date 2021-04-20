@@ -60,14 +60,125 @@
     xhr.send(data);
   });
 
+  $("#pass-visibility").on("click", function() {
+    const element = $("form#register-form #password");
+    const passwordTypes = element.attr("type");
+    if (passwordTypes === "text") {
+      element.attr("type", "password");
+    } else {
+      element.attr("type", "text");
+    }
+  })
+
+  $("form#register-form").on("submit", function (event) {
+    event.preventDefault();
+
+    const email = $("form#register-form #email").val();
+    const password = $("form#register-form #password").val();
+    const age = $("form#register-form #age").val();
+    const currentYear = new Date().getFullYear();
+    const dob = `${currentYear - age}-12-31`;
+    const registerURl = 'https://glyph.draft.int.one.gamigo.com/api/v1_2/register-account.action';
+    const requestData =
+      `<?xml version="1.0" encoding="UTF-8"?>
+      <accountCreateRequest version="1.2">
+        <account>
+          <firstName> </firstName>
+          <lastName> </lastName>
+          <dateOfBirth>${dob}</dateOfBirth>
+          <countryCode>ua</countryCode>
+          <emailAddress>${email}</emailAddress>
+          <password>${password}</password>
+          <languageCode>en_US</languageCode>
+          <affiliateId></affiliateId>
+          <optInChannels>
+            <channel>skydome</channel>
+          </optInChannels>
+          </account>
+          <g-recaptcha-response>03AGdBq25IS8uv3saWLjHJ60Ag1J6eucuPoW6juz_aITEHVZ3eXze0RVQxd99rVaP3D8Fa2i3hirpTHcyKh_o_4jSOFloWwNRSHDrOnqdBVlgtOaQhLaQHIe9vFVqWUxT59yHLGtqzDC-MgDhXnsMTyTzSjfHvpE19KmNOuvLJqTuwgfHwOFETqqI0st3X5iq1GgfmYojMpNgUHSZrGrzP0hu2Qre43HXiClMl2yPbnu1WYKpwOrs2W1iT0JKMLwiUul7LL5ytggYW12zxEcrMqnAeeJBDaE68SS-fhdjWSJzpuYdKzWpr3xlM8qkmGt0D3E2t6t6_oRkKjvnBCdTgQ-ipmCaLaFscXP_ya-QeyYbMB46jiNk5XBR0usiZGZETu3n6OolXvvC51-bTifdFcJmH87Pw7N8LtETFyW8nbYIjm3S5GM8yqI-7S0yotkRgfMCmK4YQcxXUIFKUJ-mEkn91iSfVsSOe7w</g-recaptcha-response>
+        </accountCreateRequest>`;
+
+    $.ajax({
+      url: registerURl,
+      method: "POST",
+      contentType: "plain/text",
+      data: requestData,
+    }).done(function (data) {
+      if(!!$(data).find("errors").children().toArray().length) {
+        $(data).find("errors").children().toArray().forEach(elem => {
+          console.error('Registration error:' + $(elem).attr('code'))
+        });
+      } else {
+        const storeToken = $(data).find("storeToken").text();
+        Cookies.set('trion-store-token', storeToken);
+      }
+    }).fail(function (e) {
+      console.log(e);
+    }).always(function () {
+    });
+  })
+
+  function validateEmail(value) {
+    // Email reg exp
+    return new RegExp('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$').test(value);
+  }
+
+  function validateAge(value) {
+    return value && value > 0;
+  }
+
+  function validatePassword(value) {
+    const min = 8;
+    const max = 32;
+    const isMoreThanMin = value.length > min - 1;
+    const isLessThanMax = value.length < max - 1;
+    const hasUppercase = new RegExp(/(.*[A-Z].*)/).test(value);
+    const hasSpecialChapter = new RegExp(/(?=.*[-+_!@#$%^&*., ?])/).test(value);
+
+    return isMoreThanMin && isLessThanMax && hasUppercase && hasSpecialChapter;
+  }
+
+  function validateTos(checked) {
+    return !!checked;
+  }
+
+  $("form#register-form #email").on("blur", function (event) {
+    const emailError = $("#email-error");
+
+    if (validateEmail(event.target.value)) {
+      emailError.hide();
+    } else {
+      emailError.show();
+    }
+  })
+
+  $("form#register-form #password").on("blur", function (event) {
+    if (validatePassword(event.target.value));
+  })
+
+  $("form#register-form #age").on("blur", function (event) {
+    const ageError = $("#age-error");
+    if (validateAge(event.target.value)) {
+      ageError.hide();
+    } else {
+      ageError.show();
+    }
+  })
+
+  $("form#register-form #tos").on("change", function (event) {
+    const tosError = $("#tos-error");
+    if (validateTos(event.target.checked)) {
+      tosError.hide();
+    } else {
+      tosError.show();
+    }
+  })
+
   $(document).on("submit", "form#beta-survey-form", function (ev) {
     ev.preventDefault();
 
     const version = $("input[name=version]").val();
     const language = "en";
-    const storeToken =
-      "aXZ-YXoyX0lkR1RWVGRRVjYzOGYtNnhRUSZkYXRhfjFfdmZTX3hQMFIxT2hVTXFvUkFGNk1SMlJGckp6d3hCbnhidUlJc3hFNTNfSXFhbkEwVS1WRjc1MjA2TnhVM3ZMYU9aRE5WSXZzWWUwZUE4TkZqRFprUDFJVVdSbkJsYmlnUWtKa2Fmb1RfN2o5QXNFc2p4cXlHM1EwbVJrUXYxazhIOUpEODZndGotWW9laExUS053VGJLUzZzc2ZxdURTSmw3ZEdFNHRHOEdjSTAzcHRmZHNtYzJ2dGpZVVBfSXRFY1dlSWFLd1lZdHlTcGFzWkhmTDRWSXdhbFdXWW85VjVJUm44ZmNjbjRGcW83eEhySTVWblVIRFVGd1d2YU14emVCdjZKUExxY2hWaEpIa3FWeFhoQnFFMDF0QzJ4R0xKUEJ0ZE1CSTNWcFNycG9BTVNwcm1BUGN2ZU52TEt4V1kxRnAta2NfWktaWEVyc3Q5SkJlZkluZTcyek9xTGlvb3o3VHJvMEVFWWtYM2FkY3hSbzNBd2pqUVFJY25MMnBPWjFWdUhqQ0lyUDhla0kxY2JBd0FpTFFMMHB5cnQ3bU5FUFc0QjZoRlZTcVZLV0lKMG0zLXpsUHlNR01zVm5MdWJvWjlSZEp6WGt0V3FWVWw3TlZQZTAxd3psSzc0cjNIajJYekw3ajQyNm8yMkpRQkp4WkJnanZaci1ObnBNWG1SbHQ1M3pyMG5ablVvYVQyUDdoQQAA";
-    const phone = $("input[name=phone]").val();
     const data = $(this).serializeArray();
     const questionsCount = $(".survey-questions > li").length - 1;
     var answers = {};
@@ -89,13 +200,21 @@
       return;
     }
 
+    // generate query parameters
+    const query = $.param({
+      phone: $("input[name=phone]").val(),
+      optin: $("input[name=optin]").is(":checked"),
+      storeToken:
+        "aXZ-U3h0SGRjTGVsSTFlNG5JZmZ3THhoQSZkYXRhfnlpNGhhMG1PSjRNQTVzOTlZQ3lZUHc0ZHBQSTdSZE1HZVBoeVZZVWkzMl9ob2pUUE5nS3ZhZFBvdjZBM0hOU01RLVY3bjVtZHNSMmtsZVVtQTYtRVVZUV9ybUFobWM4Z0tlWndlOFlYYTNmUUN4S2dIYzZiM3AtMjhibVdVUjA1Uk1Sckp1SFhYTGJmQnlTdWJvNUF1T3VhQnlrUE9WeGNzX2NQeXJZN1FrWndWX0hWaVZLZ0Yyb2c4VUMtNk5TTkstWmVZdURDemxOcjN2cG81eGM2VEEtMGpGbnVsZEZLeEdlbVpEcDk4dE4wbFoxZnBhY1RiQUZJTV9UeTRWazJOVGRDTTYzNlJNZVdKb1QyNDF4NlpmczJ4LUtQNTFWZ1B6TFF1Wk5HV0Zkb3VQU0hkY29ZRHRFeUMzTDNUTUN2TWhfVU5Qc3BYcTh3RnU1SWxFSEo1QTFaUnBXVE5PaGZQSmVVQmhyaFdDUm1HRW9WbFhoc2puR25fTk5ObjRjMkFSeG5FYXlZZVo4Z04yWHp4b2hUVGQ2MThkbF9ySlRvZmE3SDM3N0RwRHRxbmt1ZjhhSHBPZ3pYTl80SzVyVXNmLUpCMURsSFhzelJnMXF3UDk3NzhmdDhQb0dSeDJUeF9CNEVWRFZHNko0d05lSkVuUHFBa05XN3BOV3o0TjMwM2MxOU1IMHZVQ3NxcWZKd0dHUkw2UQAA",
+    });
+
     // display loader
     $(".survey-wrapper").hide();
     $(".survey-loader").removeClass("hidden");
 
     // send request
     $.ajax({
-      url: `https://betasurvey.draft.int.one.gamigo.com/api/survey/${version}/${language}/?storeToken=${storeToken}&phone=${phone}`,
+      url: `https://betasurvey.draft.int.one.gamigo.com/api/survey/${version}/${language}/?${query}`,
       method: "POST",
       contentType: "application/json",
       data: JSON.stringify(answers),
@@ -183,7 +302,7 @@ $(document).ready(function () {
   });
 
   /*if($(document).width() > "768") {
-    $('.screenshots').slick({  
+    $('.screenshots').slick({
         centerMode: true,
         centerPadding: '500px',
         slidesToShow: 1,
