@@ -65,9 +65,6 @@
 
     const version = $("input[name=version]").val();
     const language = "en";
-    const storeToken =
-      "aXZ-YXoyX0lkR1RWVGRRVjYzOGYtNnhRUSZkYXRhfjFfdmZTX3hQMFIxT2hVTXFvUkFGNk1SMlJGckp6d3hCbnhidUlJc3hFNTNfSXFhbkEwVS1WRjc1MjA2TnhVM3ZMYU9aRE5WSXZzWWUwZUE4TkZqRFprUDFJVVdSbkJsYmlnUWtKa2Fmb1RfN2o5QXNFc2p4cXlHM1EwbVJrUXYxazhIOUpEODZndGotWW9laExUS053VGJLUzZzc2ZxdURTSmw3ZEdFNHRHOEdjSTAzcHRmZHNtYzJ2dGpZVVBfSXRFY1dlSWFLd1lZdHlTcGFzWkhmTDRWSXdhbFdXWW85VjVJUm44ZmNjbjRGcW83eEhySTVWblVIRFVGd1d2YU14emVCdjZKUExxY2hWaEpIa3FWeFhoQnFFMDF0QzJ4R0xKUEJ0ZE1CSTNWcFNycG9BTVNwcm1BUGN2ZU52TEt4V1kxRnAta2NfWktaWEVyc3Q5SkJlZkluZTcyek9xTGlvb3o3VHJvMEVFWWtYM2FkY3hSbzNBd2pqUVFJY25MMnBPWjFWdUhqQ0lyUDhla0kxY2JBd0FpTFFMMHB5cnQ3bU5FUFc0QjZoRlZTcVZLV0lKMG0zLXpsUHlNR01zVm5MdWJvWjlSZEp6WGt0V3FWVWw3TlZQZTAxd3psSzc0cjNIajJYekw3ajQyNm8yMkpRQkp4WkJnanZaci1ObnBNWG1SbHQ1M3pyMG5ablVvYVQyUDdoQQAA";
-    const phone = $("input[name=phone]").val();
     const data = $(this).serializeArray();
     const questionsCount = $(".survey-questions > li").length - 1;
     var answers = {};
@@ -89,13 +86,21 @@
       return;
     }
 
+    // generate query parameters
+    const query = $.param({
+      phone: $("input[name=phone]").val(),
+      optin: $("input[name=optin]").is(":checked"),
+      storeToken:
+        "aXZ-U3h0SGRjTGVsSTFlNG5JZmZ3THhoQSZkYXRhfnlpNGhhMG1PSjRNQTVzOTlZQ3lZUHc0ZHBQSTdSZE1HZVBoeVZZVWkzMl9ob2pUUE5nS3ZhZFBvdjZBM0hOU01RLVY3bjVtZHNSMmtsZVVtQTYtRVVZUV9ybUFobWM4Z0tlWndlOFlYYTNmUUN4S2dIYzZiM3AtMjhibVdVUjA1Uk1Sckp1SFhYTGJmQnlTdWJvNUF1T3VhQnlrUE9WeGNzX2NQeXJZN1FrWndWX0hWaVZLZ0Yyb2c4VUMtNk5TTkstWmVZdURDemxOcjN2cG81eGM2VEEtMGpGbnVsZEZLeEdlbVpEcDk4dE4wbFoxZnBhY1RiQUZJTV9UeTRWazJOVGRDTTYzNlJNZVdKb1QyNDF4NlpmczJ4LUtQNTFWZ1B6TFF1Wk5HV0Zkb3VQU0hkY29ZRHRFeUMzTDNUTUN2TWhfVU5Qc3BYcTh3RnU1SWxFSEo1QTFaUnBXVE5PaGZQSmVVQmhyaFdDUm1HRW9WbFhoc2puR25fTk5ObjRjMkFSeG5FYXlZZVo4Z04yWHp4b2hUVGQ2MThkbF9ySlRvZmE3SDM3N0RwRHRxbmt1ZjhhSHBPZ3pYTl80SzVyVXNmLUpCMURsSFhzelJnMXF3UDk3NzhmdDhQb0dSeDJUeF9CNEVWRFZHNko0d05lSkVuUHFBa05XN3BOV3o0TjMwM2MxOU1IMHZVQ3NxcWZKd0dHUkw2UQAA",
+    });
+
     // display loader
     $(".survey-wrapper").hide();
     $(".survey-loader").removeClass("hidden");
 
     // send request
     $.ajax({
-      url: `https://betasurvey.draft.int.one.gamigo.com/api/survey/${version}/${language}/?storeToken=${storeToken}&phone=${phone}`,
+      url: `https://betasurvey.draft.int.one.gamigo.com/api/survey/${version}/${language}/?${query}`,
       method: "POST",
       contentType: "application/json",
       data: JSON.stringify(answers),
