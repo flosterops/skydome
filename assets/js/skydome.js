@@ -1,3 +1,10 @@
+const CONFIG = {
+  sitekey: "6LcYYf8SAAAAAC4Ue3GylRjpFpUrnfLHX46kNOBn",
+  apiURI: "glyph.draft.int.one.gamigo.com",
+  sessionURI: "session.draft.int.one.gamigo.com",
+  disableGoogleCaptcha: false,
+};
+
 !(function (a, b, c, d) {
   a.fn.doubleTapToGo = function (d) {
     return (
@@ -32,8 +39,7 @@
     $("body").hasClass("require-store-token") &&
     !Cookies.get("trion-store-token")
   ) {
-    alert("Please, sign in first");
-    window.location.href = "/";
+    window.location.href = `https://${CONFIG.sessionURI}/login?service=${window.location.href}`;
   }
 
   $(document).on("submit", "form.registration-form", function (e) {
