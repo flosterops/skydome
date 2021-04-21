@@ -2,29 +2,65 @@
 <html lang="en">
 
 <head>
-<script>
-	const CONFIG = {
-		sitekey: "6LcYYf8SAAAAAC4Ue3GylRjpFpUrnfLHX46kNOBn",
-		apiURI: "glyph.draft.int.one.gamigo.com",
-		sessionURI: "session.draft.int.one.gamigo.com",
-		disableGoogleCaptcha: false,
-	};
-</script>
+	<meta charset="utf-8">
+	<meta name="robots" content="index,follow" />
+	<meta name="description"
+		content="Skydome – Tear down enemy towers and dominate the battle arena to become the ultimate champion in this epic, tower defense experience! Sign up now for the Skydome Beta!">
+	<meta name="google-site-verification" content="-k3dbrntxrkBQfrCUdBa_th_nNWPjiuX2YdwUyjWmNI" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:image" content="/assets/images/screenshots/skydome-screenshot-3.jpg">
+	<meta property="og:site_name" content="Skydome – Where Tower Defense meets MOBA">
+	<meta property="og:title" content="Skydome – Where Tower Defense meets MOBA">
+	<meta property="og:url" content="https://playskydome.com/">
+	<meta property="og:description"
+		content="Skydome – Tear down enemy towers and dominate the battle arena to become the ultimate champion in this epic, tower defense experience! Sign up now for the Skydome Beta!">
 
-<script type="text/javascript" src="/assets/js/js.cookie.min.js"></script>
-<script type="text/javascript" src="https://webcdn.triongames.com/trion/js/common/TRION_CORE.js"></script>
-<script type="text/javascript" src="https://webcdn.triongames.com/trion/js/common/TRION_REG.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="canonical" href="https://playskydome.com/">
 
-<script>
-	const interval = setInterval(function () {
-		if (Cookies.get("storeToken")) {
-			window.location.href = '/en/beta-survey.html';
-		}
-	}, 100);
-</script>
+	<title>Skydome – Where Tower Defense meets MOBA</title>
+
+	<link rel="stylesheet" type="text/css" href="/assets/css/skydome.css">
+
+	<script>
+		const CONFIG = {
+			sitekey: "6LcYYf8SAAAAAC4Ue3GylRjpFpUrnfLHX46kNOBn",
+			apiURI: "glyph.draft.int.one.gamigo.com",
+			sessionURI: "session.draft.int.one.gamigo.com",
+			disableGoogleCaptcha: false,
+		};
+	</script>
+
 </head>
 
 <body>
+	<div class="pusher">
+		<div id="totop" class="top_visible"></div>
+		<div id="bg_mask"></div>
+
+		<section id="beta-registration">
+			<div class="container">
+				<div class="survey">
+					<div class="survey-loader">
+						<div class="lds-dual-ring"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<script type="text/javascript" src="/assets/js/js.cookie.min.js"></script>
+	<script type="text/javascript" src="https://webcdn.triongames.com/trion/js/common/TRION_CORE.js"></script>
+	<script type="text/javascript" src="https://webcdn.triongames.com/trion/js/common/TRION_REG.js"></script>
+
+	<script>
+		const interval = setInterval(function () {
+			if (Cookies.get("storeToken")) {
+				window.location.href = '/en/beta-survey.html';
+			}
+		}, 500);
+	</script>
 </body>
 
 </html>
