@@ -57,7 +57,10 @@
 	<script>
 		const interval = setInterval(function () {
 			if (Cookies.get("storeToken")) {
-				window.location.href = '/en/beta-survey.html';
+				clearInterval(interval);
+
+				const lang = Cookies.get("language") || 'en';
+				window.location.href = `/${lang}/beta-survey.html`;
 			}
 		}, 500);
 	</script>
