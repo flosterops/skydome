@@ -277,7 +277,8 @@ section {
 }
 
 input[type="text"],
-input[type="tel"] {
+input[type="tel"],
+input[type="url"] {
   color: #fcfcfc;
   border: 1px solid #2c6f98;
   background-color: #00101d;
@@ -2361,7 +2362,8 @@ footer .legal ul li a {
 }
 
 #beta-registration .survey-answers input[type="text"],
-#beta-registration .survey-answers input[type="tel"] {
+#beta-registration .survey-answers input[type="tel"],
+#beta-registration .survey-answers input[type="url"] {
   width: 60%;
 }
 
@@ -2447,7 +2449,8 @@ footer .legal ul li a {
   }
 
   #beta-registration .survey-answers input[type="text"],
-  #beta-registration .survey-answers input[type="tel"] {
+  #beta-registration .survey-answers input[type="tel"],
+  #beta-registration .survey-answers input[type="url"] {
     width: 90%;
   }
 }

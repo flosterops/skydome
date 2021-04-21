@@ -85,24 +85,28 @@
     }
   });
 
-  $("button#registration").prop('disabled', true);
+  $("button#registration").prop("disabled", true);
 
   [
     $("form#register-form #password"),
     $("form#register-form #email"),
     $("form#register-form #age"),
-    $("form#register-form #tos")
+    $("form#register-form #tos"),
   ].forEach(($elem) => {
     $elem.on("change", function (ev) {
       const password = $("form#register-form #password").val();
       const email = $("form#register-form #email").val();
       const age = $("form#register-form #age").val();
-      const tos = !!$("form#register-form #tos").attr('checked');
-      const isFormValid = validatePassword(password) && validateEmail(email) && validateAge(age) && validateTos(tos);
+      const tos = !!$("form#register-form #tos").attr("checked");
+      const isFormValid =
+        validatePassword(password) &&
+        validateEmail(email) &&
+        validateAge(age) &&
+        validateTos(tos);
       const submitButton = $("form#register-form #registration");
-      submitButton.prop('disabled', !isFormValid)
-    })
-  })
+      submitButton.prop("disabled", !isFormValid);
+    });
+  });
 
   function getLang() {
     let lang = window.location.href.replace(window.origin + "/", "");
@@ -154,7 +158,7 @@
           const storeToken = $(data).find("storeToken").text();
           Cookies.set("trion-store-token", storeToken);
           const lang = getLang();
-          window.location.href = `${window.origin}/${lang}/beta-survey.html`
+          window.location.href = `${window.origin}/${lang}/beta-survey.html`;
         }
       })
       .fail(function (e) {
@@ -276,6 +280,12 @@
     const questionsCount = $(".survey-questions > li").length - 1;
     var answers = {};
 
+    // check store token
+    if (!storeToken) {
+      alert("Please, sign in first");
+      return;
+    }
+
     // transform form data into answers object
     data
       .filter((e) => !isNaN(e.name) && e.value !== "")
@@ -287,16 +297,18 @@
         }
       });
 
-    // check store token
-    if (!storeToken) {
-      alert("Please, sign in first");
-      return;
-    }
-
     // verify answer count
     if (Object.keys(answers).length !== questionsCount) {
       alert("Please, answer all questions first");
       return;
+    }
+
+    // add optional fields if provided
+    if (
+      $("input[name=7]:checked").val() === "a" &&
+      $("input[name=7a]").val() !== ""
+    ) {
+      answers["7a"] = $("input[name=7a]").val();
     }
 
     // generate query parameters
