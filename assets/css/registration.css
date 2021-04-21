@@ -195,6 +195,7 @@
 
 #register-form .checkbox-container a {
     color: #2c6f98;
+    text-decoration: none;
 }
 
 #register-form .checkbox-container label {
