@@ -13,14 +13,6 @@
 		<meta property="og:url" content="https://playskydome.com/">
 		<meta property="og:description" content="Skydome – Tear down enemy towers and dominate the battle arena to become the ultimate champion in this epic, tower defense experience! Sign up now for the Skydome Beta!">
 
-		<!-- OneTrust Cookies Consent Notice start for playskydome.com -->
-		<script type="text/javascript" src="https://cdn.cookielaw.org/consent/e59e366b-a06f-4e8c-8b61-b3cc006f9ab5/OtAutoBlock.js" ></script>
-		<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="e59e366b-a06f-4e8c-8b61-b3cc006f9ab5" ></script>
-		<script type="text/javascript">
-			function OptanonWrapper() { }
-		</script>
-		<!-- OneTrust Cookies Consent Notice end for playskydome.com -->
-
 		<link rel="shortcut icon" type="image/x-icon" href="https://webcdn.triongames.com/landingpages/skydome/assets/favicon.ico">
 		<link rel="canonical" href="https://playskydome.com/">
 
@@ -31,15 +23,37 @@
 		<link rel="stylesheet" type="text/css" href="https://webcdn.triongames.com/landingpages/skydome/assets/css/splide.min.css">
 		<link rel="stylesheet" type="text/css" href="https://webcdn.triongames.com/landingpages/skydome/assets/css/skydome.css?ver=01">
 		<link rel="stylesheet" type="text/css" href="https://webcdn.triongames.com/landingpages/skydome/assets/css/sidebar.min.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/registration.css">
 
     	<link rel="preconnect" href="https://fonts.gstatic.com">
     	<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;1,600&display=swap" rel="stylesheet">
 
+		<script>
+
+			dataLayer=[];
+			dataLayer.push({
+				'gp_backend':'gamigo Publishing',
+				'gp_frontend':'StaticPage',
+				'gp_gamename':'Skydome',
+				'gp_language':'en',
+				'gp_page':'Landingpage',
+				'gp_type':'Landingpage',
+				'gp_clientid':'Skydome EN'
+			});
+
+		</script>
+
+		<!--<script type="text/javascript" src="//webcdn.triongames.com/trion/js/common/trakken.js"></script>
+		<script type="text/javascript">
+		  Trakken.init('skydome');
+		  Trakken.sendPageView('', 'Product Page');
+		</script>-->
+
 		<!-- Google Tag Manager -->
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-					new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','GTM-TLJC7HC');</script>
 		<!-- End Google Tag Manager -->
 
@@ -48,7 +62,7 @@
 
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLJC7HC"
-						  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
 
 		<div class="ui sidebar">
@@ -116,30 +130,75 @@
           <p>4x4 is the way to play! Assemble a team of skilled heroes and build walls and defensive towers to defeat waves of enemies while completing side objectives in the jungle. Recruit trusted friends or make new allies along the way. </p>
         </div>
 
-        <div class="register">
+			<form id="register-form" class="flex register-form">
+				<img class="reg-form-bg" src="/assets/images/background/form-bg.svg" alt="form-background" />
+				<div class="flex reg-form-group">
+					<div class="flex">
+						<label for="email">Email Address</label>
+						<input type="email" id="email" name="email" required />
+						<span class="error" id="email-error">Email address must have the form 'email@server.com'</span>
+					</div>
+				</div>
+				<div class="flex reg-form-group pass-form-group">
+					<div class="flex password-container">
+						<div class="flex">
+							<label for="password">Password</label>
+							<input type="password" id="password" name="password" required />
+						</div>
+						<button type="button" id="pass-visibility">
+							<img id="pass-hidden" src="https://webcdn.triongames.com/landingpages/skydome/assets/images/visibility_off_blue_24dp.svg" />
+							<img id="pass-visible" src="https://webcdn.triongames.com/landingpages/skydome/assets/images/visibility_blue_24dp.svg" />
+						</button>
+					</div>
+					<div class="flex age-container">
+						<label for="age">Age</label>
+						<input type="number" id="age" name="age" required />
+						<span class="error" id="age-error">Age is Required.</span>
+					</div>
+					<div class="password-errors">
+						<span class="pass-error-title">Your new password must:</span>
+						<ul>
+							<li>
+								<span class="error-color" id="one-alphabetic-error">Have at least 1 alphabetic character – A-Z</span>
+							</li>
+							<li>
+								<span class="error-color" id="one-num-and-special-error">Have at least 1 number (0-9), 1 valid special character (!,@,#,etc.), and not begin or end with a space.</span>
+							</li>
+							<li>
+								<span class="error-color" id="length-error">Have between 8 and 32 characters – long strings and sentences are fully supported!</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="flex reg-form-group">
+					<div class="g-recaptcha" data-sitekey="6LcYYf8SAAAAAC4Ue3GylRjpFpUrnfLHX46kNOBn"></div>
+				</div>
+				<div class="flex">
+					<div class="flex checkbox-container">
+						<input type="checkbox" id="tos" name="tos" />
+						<label for="tos">
+							I have read and agree to Trion's <a href="https://playskydome.com/legal/privacy-policy.html">Privacy Policy.</a>
+						</label>
+						<span class="error" id="tos-error">You must accept the Terms of Use.</span>
+					</div>
+					<div class="flex checkbox-container">
+						<input type="checkbox" id="mailing" name="mailing" />
+						<label for="mailing">
+							Sign up me for the latest Skydome news.
+						</label>
+					</div>
+				</div>
 
-          <div class="text">
-            <h4>Apply for the <span>Skydome Beta</span></h4>
-            <p>and be the first to be notified when the <span>beta </span>starts<span>!</span></p>
-          </div>
-
-          <form id="newsletter-form" class="registration-form">
-            <input id="email-newsletter" class="email-input" type="email" placeholder="ENTER YOUR EMAIL ADDRESS HERE" required>
-            <input id="confirmation" class="confirmation-box" type="checkbox" required>
-            <label for="confirmation">
-            <span>I would like to receive the gamigo group Newsletter.</span> This is the newsletter of the gamigo group (all companies involved can be viewed
-            <div class="tooltip">here<span class="tooltiptext">gamigo group: Aeria Games GmbH (address: Schlesische Str. 27c, 10997 Berlin, Germany),<br>
-              gamigo US Inc. (address: 9430 Research Blvd Austin TX 78759 United States of America),<br>
-              gamigo AG (address: Behringstr. 16b, 22765 Hamburg, Germany),<br>
-              gamigo Inc. (address: 800 Bellevue Way NE, Suite 500, Bellevue, WA 98004, United States of America),<br>
-              gamigo Publishing GmbH (address: Behringstr. 16b, 22765 Hamburg, Germany) and gamigo Portals GmbH (address: Behringstr. 16b, 22765 Hamburg, Germany)</span></div>
-            ). I agree that every company of the gamigo group may inform me about all offers, services, and other activities, including those of other companies in the group. Further information is available in the Privacy Policy. This agreement can be withdrawn at any time and without stating reasons via the Unsubscribe Button.
-            </label>
-            <div class="submit-container">
-              <button id="input-newsletter" type="submit">Apply for beta</button>
-            </div>
-          </form>
-        </div>
+				<div class="flex reg-submit-container">
+					<button id="registration" type="submit">
+						register account
+						<span></span>
+					</button>
+				</div>
+				<div class="flex sign-in-container">
+					<p>If you have an account click here to: <a href="https://session.draft.int.one.gamigo.com/login?service=http%3A%2F%2Fskydome.gamigo.io%3A5000%2Fen%2Fbeta-survey.html" target="_blank">Sign in</a></p>
+				</div>
+			</form>
 
         <div class="modal" id="modal"><h2>Thank you for signing up</h2><p id="modal-text">Please check your inbox to confirm your email.</p><button class="close-button" id="close-button">Close</button></div>
         <div class="modal-overlay" id="modal-overlay"></div>
@@ -269,15 +328,17 @@
 
 		<script type="text/javascript" src="https://webcdn.triongames.com/landingpages/skydome/assets/js/lity.min.js"></script>
 		<script type="text/javascript" src="https://webcdn.triongames.com/landingpages/skydome/assets/js/sidebar.min.js"></script>
+		<script type="text/javascript" src="https://webcdn.triongames.com/landingpages/skydome/assets/js/js.cookie.min.js"></script>
 
 		<script type="text/javascript" src="https://webcdn.triongames.com/landingpages/skydome/assets/js/skydome.js?ver=01"></script>
+		<script type="text/javascript" src="/assets/js/skydome.js"></script>
 
-		<!-- Start Trakken -->
-		<script type="text/javascript" src="https://gtas.playskydome.com/gmgSession.js"></script>
+		<!-- OneTrust Cookies Consent Notice start for playskydome.com -->
+		<script type="text/javascript" src="https://cdn.cookielaw.org/consent/e59e366b-a06f-4e8c-8b61-b3cc006f9ab5/OtAutoBlock.js" ></script>
+		<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="e59e366b-a06f-4e8c-8b61-b3cc006f9ab5" ></script>
 		<script type="text/javascript">
-			GmgSession.init('sky', 'playskydome.com');
-			GmgSession.sendPageView(null, 'Landing Page');
+		function OptanonWrapper() { }
 		</script>
-		<!-- End Trakken -->
+		<!-- OneTrust Cookies Consent Notice end for playskydome.com -->
 	</body>
 </html>
