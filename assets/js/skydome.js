@@ -71,12 +71,38 @@
   $("#pass-visibility").on("click", function () {
     const element = $("form#register-form #password");
     const passwordTypes = element.attr("type");
+    const passVisibleElem = $("form#register-form #pass-visible");
+    const passHiddenElem = $("form#register-form #pass-hidden");
+
     if (passwordTypes === "text") {
       element.attr("type", "password");
+      passHiddenElem.show();
+      passVisibleElem.hide();
     } else {
       element.attr("type", "text");
+      passHiddenElem.hide();
+      passVisibleElem.show();
     }
   });
+
+  $("button#registration").prop('disabled', true);
+
+  [
+    $("form#register-form #password"),
+    $("form#register-form #email"),
+    $("form#register-form #age"),
+    $("form#register-form #tos")
+  ].forEach(($elem) => {
+    $elem.on("change", function (ev) {
+      const password = $("form#register-form #password").val();
+      const email = $("form#register-form #email").val();
+      const age = $("form#register-form #age").val();
+      const tos = !!$("form#register-form #tos").attr('checked');
+      const isFormValid = validatePassword(password) && validateEmail(email) && validateAge(age) && validateTos(tos);
+      const submitButton = $("form#register-form #registration");
+      submitButton.prop('disabled', !isFormValid)
+    })
+  })
 
   $("form#register-form").on("submit", function (event) {
     event.preventDefault();
@@ -94,7 +120,6 @@
           <firstName> </firstName>
           <lastName> </lastName>
           <dateOfBirth>${dob}</dateOfBirth>
-          <countryCode>ua</countryCode>
           <emailAddress>${email}</emailAddress>
           <password>${password}</password>
           <languageCode>en_US</languageCode>
@@ -167,8 +192,53 @@
     }
   });
 
+  $("form#register-form #password").on("focus", function (event) {
+    const passErrors = $("form#register-form .password-errors");
+    passErrors.show();
+  });
+
   $("form#register-form #password").on("blur", function (event) {
+    const passErrors = $("form#register-form .password-errors");
+    passErrors.hide();
     if (validatePassword(event.target.value));
+  });
+
+  $("form#register-form #password").on("input", function (event) {
+    const value = event.target.value;
+    const oneAlph = $("#one-alphabetic-error");
+    const numAndSpecial = $("#one-num-and-special-error");
+    const lengthErr = $("#length-error");
+
+    const min = 8;
+    const max = 32;
+    const isMoreThanMin = value.length > min - 1;
+    const isLessThanMax = value.length < max - 1;
+    const hasUppercase = new RegExp(/(.*[A-Z].*)/).test(value);
+    const hasSpecialChapter = new RegExp(/(?=.*[-+_!@#$%^&*., ?])/).test(value);
+
+    if (isMoreThanMin && isLessThanMax) {
+      lengthErr.addClass("success-color");
+      lengthErr.removeClass("error-color");
+    } else {
+      lengthErr.removeClass("success-color");
+      lengthErr.addClass("error-color");
+    }
+
+    if (hasUppercase) {
+      oneAlph.addClass("success-color");
+      oneAlph.removeClass("error-color");
+    } else {
+      oneAlph.removeClass("success-color");
+      oneAlph.addClass("error-color");
+    }
+
+    if (hasSpecialChapter) {
+      numAndSpecial.addClass("success-color");
+      numAndSpecial.removeClass("error-color");
+    } else {
+      numAndSpecial.removeClass("success-color");
+      numAndSpecial.addClass("error-color");
+    }
   });
 
   $("form#register-form #age").on("blur", function (event) {
