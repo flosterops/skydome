@@ -104,6 +104,11 @@
     })
   })
 
+  function getLang() {
+    let lang = window.location.href.replace(window.origin + "/", "");
+    return lang.substr(0, lang.indexOf("/"));
+  }
+
   $("form#register-form").on("submit", function (event) {
     event.preventDefault();
 
@@ -148,6 +153,8 @@
         } else {
           const storeToken = $(data).find("storeToken").text();
           Cookies.set("trion-store-token", storeToken);
+          const lang = getLang();
+          window.location.href = `${window.origin}/${lang}/beta-survey.html`
         }
       })
       .fail(function (e) {
