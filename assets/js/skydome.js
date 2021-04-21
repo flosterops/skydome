@@ -32,7 +32,7 @@
     $("body").hasClass("require-store-token") &&
     !Cookies.get("trion-store-token")
   ) {
-    window.location.href = `https://${CONFIG.sessionURI}/login?service=https://${window.location.hostname}/sso.html`;
+    window.location.href = `https://session.draft.int.one.gamigo.com/login?service=https://${window.location.hostname}/sso.html`;
   }
 
   $(document).on("submit", "form.registration-form", function (e) {
