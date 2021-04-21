@@ -117,6 +117,9 @@
     const age = $("form#register-form #age").val();
     const currentYear = new Date().getFullYear();
     const dob = `${currentYear - age}-12-31`;
+    const optin = $("input[name=optin]").is(":checked")
+      ? "<channel>skydomebeta</channel>"
+      : "";
     const registerURl =
       "https://glyph.draft.int.one.gamigo.com/api/v1_2/register-account.action?X-GameServer-Channel=4111";
     const requestData = `<?xml version="1.0" encoding="UTF-8"?>
@@ -129,9 +132,7 @@
           <password>${password}</password>
           <languageCode>en_US</languageCode>
           <affiliateId></affiliateId>
-          <optInChannels>
-            <channel>skydome</channel>
-          </optInChannels>
+          <optInChannels>${optin}</optInChannels>
           </account>
         </accountCreateRequest>`;
 
