@@ -2351,9 +2351,10 @@ footer .legal ul li a {
 
 #beta-registration .survey-container {
   overflow-y: auto;
+  overflow-x: hidden;
   text-align: left;
   color: #fcfcfc;
-  padding: 25px 0 25px 50px;
+  padding: 25px 25px 25px 50px;
   scrollbar-color: #393e42 transparent;
 }
 
