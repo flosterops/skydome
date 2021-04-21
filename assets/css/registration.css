@@ -166,7 +166,17 @@
 
 #pass-visibility {
     height: 50px;
+    width: 30px;
     margin-left: 10px;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pass-visibility:hover {
+    opacity: 0.8;
 }
 
 #register-form .age-container {
@@ -285,6 +295,12 @@
     margin-right: 0;
 }
 
+.container #register-form {
+    width: 515px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #register-form .error {
     color: #a00;
     display: none;
@@ -297,6 +313,62 @@
 #register-form #age-error {
     left: -16px;
     white-space: normal;
+}
+
+#pass-visible {
+    display: none;
+}
+
+#pass-hidden {
+    display: block;
+}
+
+#registration:disabled {
+    cursor: not-allowed !important;
+    position: relative;
+}
+
+#registration:disabled span {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+}
+
+#register-form .pass-form-group .password-errors {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: -160px;
+    z-index: 10;
+}
+
+#register-form .pass-form-group .password-errors .pass-error-title {
+    display: block;
+    padding: 2% 5%;
+    background-color: #b51c2d;
+    color: #fff;
+}
+
+#register-form .pass-form-group .password-errors ul {
+    display: block;
+    padding: 2% 5%;
+    background: #fff;
+}
+
+.error-color {
+    color: #a00;
+}
+
+.success-color {
+    color: #6bc589;
+}
+
+#pass-visibility img {
+    width: 100%;
 }
 
 #register-form #tos-error {
