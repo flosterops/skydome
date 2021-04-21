@@ -28,10 +28,7 @@
 })(jQuery, window, document);
 
 (function () {
-  if (
-    $("body").hasClass("require-store-token") &&
-    !Cookies.get("trion-store-token")
-  ) {
+  if ($("body").hasClass("require-store-token") && !Cookies.get("storeToken")) {
     window.location.href = `https://session.draft.int.one.gamigo.com/login?service=https://${window.location.hostname}/sso.html`;
   }
 
@@ -155,7 +152,7 @@
             });
         } else {
           const storeToken = $(data).find("storeToken").text();
-          Cookies.set("trion-store-token", storeToken);
+          Cookies.set("storeToken", storeToken);
           const accountId = $(data).find("accountId").text();
           if (
             accountId &&
@@ -282,7 +279,7 @@
 
     const version = $("input[name=version]").val();
     const language = "en";
-    const storeToken = Cookies.get("trion-store-token");
+    const storeToken = Cookies.get("storeToken");
     const data = $(this).serializeArray();
     const questionsCount = $(".survey-questions > li").length - 1;
     var answers = {};
