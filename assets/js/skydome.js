@@ -1,10 +1,3 @@
-const CONFIG = {
-  sitekey: "6LcYYf8SAAAAAC4Ue3GylRjpFpUrnfLHX46kNOBn",
-  apiURI: "glyph.draft.int.one.gamigo.com",
-  sessionURI: "session.draft.int.one.gamigo.com",
-  disableGoogleCaptcha: false,
-};
-
 !(function (a, b, c, d) {
   a.fn.doubleTapToGo = function (d) {
     return (
@@ -39,7 +32,7 @@ const CONFIG = {
     $("body").hasClass("require-store-token") &&
     !Cookies.get("trion-store-token")
   ) {
-    window.location.href = `https://${CONFIG.sessionURI}/login?service=${window.location.href}`;
+    window.location.href = `https://${CONFIG.sessionURI}/login?service=https://${window.location.hostname}/sso.html`;
   }
 
   $(document).on("submit", "form.registration-form", function (e) {
@@ -163,9 +156,13 @@ const CONFIG = {
         } else {
           const storeToken = $(data).find("storeToken").text();
           Cookies.set("trion-store-token", storeToken);
-          const accountId = $(data).find('accountId').text();
-          if (accountId && GmgSession && GmgSession.hasOwnProperty('sendRegistrationEvent')) {
-            GmgSession.sendRegistrationEvent(accountId, 'Landing Page');
+          const accountId = $(data).find("accountId").text();
+          if (
+            accountId &&
+            GmgSession &&
+            GmgSession.hasOwnProperty("sendRegistrationEvent")
+          ) {
+            GmgSession.sendRegistrationEvent(accountId, "Landing Page");
           }
           const lang = getLang();
           window.location.href = `${window.origin}/${lang}/beta-survey.html`;

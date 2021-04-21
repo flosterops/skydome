@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<script>
+	const CONFIG = {
+		sitekey: "6LcYYf8SAAAAAC4Ue3GylRjpFpUrnfLHX46kNOBn",
+		apiURI: "glyph.draft.int.one.gamigo.com",
+		sessionURI: "session.draft.int.one.gamigo.com",
+		disableGoogleCaptcha: false,
+	};
+</script>
+
+<script type="text/javascript" src="/assets/js/js.cookie.min.js"></script>
+<script type="text/javascript" src="https://webcdn.triongames.com/trion/js/common/TRION_CORE.js"></script>
+<script type="text/javascript" src="https://webcdn.triongames.com/trion/js/common/TRION_REG.js"></script>
+
+<script>
+	const interval = setInterval(function () {
+			if (Cookies.get("storeToken")) {
+			Cookies.set("trion-store-token", Cookies.get("storeToken"));
+			window.location.href = '/en/beta-survey.html';
+		}
+	}, 500);
+</script>
+</head>
+
+<body>
+</body>
+
+</html>
