@@ -118,7 +118,7 @@
     const currentYear = new Date().getFullYear();
     const dob = `${currentYear - age}-12-31`;
     const registerURl =
-      "https://glyph.draft.int.one.gamigo.com/api/v1_2/register-account.action";
+      "https://glyph.draft.int.one.gamigo.com/api/v1_2/register-account.action?X-GameServer-Channel=4111";
     const requestData = `<?xml version="1.0" encoding="UTF-8"?>
       <accountCreateRequest version="1.2">
         <account>
