@@ -163,6 +163,10 @@ const CONFIG = {
         } else {
           const storeToken = $(data).find("storeToken").text();
           Cookies.set("trion-store-token", storeToken);
+          const accountId = $(data).find('accountId').text();
+          if (accountId && GmgSession && GmgSession.hasOwnProperty('sendRegistrationEvent')) {
+            GmgSession.sendRegistrationEvent(accountId, 'Landing Page');
+          }
           const lang = getLang();
           window.location.href = `${window.origin}/${lang}/beta-survey.html`;
         }

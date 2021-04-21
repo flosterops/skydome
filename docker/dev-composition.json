@@ -1,0 +1,11 @@
+{
+  "version": "3.7",
+  "services": {
+    "site-server": {
+      "container_name": "site-server",
+      "image": "site-image",
+      "ports": [ "9091:80" ],
+      "volumes": [ "../:/srv/site" ]
+    }
+  }
+}
