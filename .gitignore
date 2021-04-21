@@ -1,1 +1,6 @@
+!.gitignore
+.idea/
 .DS_Store
+.vs/
+npm-debug.log
+.vscode
