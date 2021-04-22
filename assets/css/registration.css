@@ -110,6 +110,9 @@
   padding: 15px 20px;
   margin-top: 10px;
 }
+#register-form #age {
+  padding: 15px 3px 15px 20px;
+}
 
 #register-form input[type="checkbox"] {
   display: none;
