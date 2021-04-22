@@ -455,6 +455,7 @@ nav ul li.language-switcher > ul li:hover::before {
 }
 
 .language-switcher {
+  display: none;
   position: absolute;
   right: 190px;
   overflow: visible;
