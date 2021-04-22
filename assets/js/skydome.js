@@ -354,13 +354,15 @@
     }
   });
 
-  const phoneInput = document.querySelector("#phone");
-  const language = Cookies.get("language") || "en";
-  const iti = intlTelInput(phoneInput, {
-    utilsScript: "/assets/js/utils.js",
-    preferredCountries: ["us", "fr", "de"],
-    initialCountry: language === "en" ? "us" : language,
-  });
+  if (typeof intlTelInput !== "undefined") {
+    const phoneInput = document.querySelector("#phone");
+    const language = Cookies.get("language") || "en";
+    const iti = intlTelInput(phoneInput, {
+      utilsScript: "/assets/js/utils.js",
+      preferredCountries: ["us", "fr", "de"],
+      initialCountry: language === "en" ? "us" : language,
+    });
+  }
 
   $(document).on("submit", "form#beta-survey-form", function (ev) {
     ev.preventDefault();
