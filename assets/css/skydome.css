@@ -1136,7 +1136,7 @@ nav ul li.language-switcher > ul li:hover::before {
   padding: 12px;
   border-radius: 5px;
   position: absolute;
-  z-index: 1;
+  z-index: 10;
 }
 
 .tooltip:hover .tooltiptext {
@@ -2463,6 +2463,11 @@ footer .legal ul li a {
 
 #beta-registration .survey-result .btn {
   margin-top: 85px;
+}
+
+#beta-registration .tooltiptext {
+  width: 270px;
+  line-height: 1.4em;
 }
 
 @media screen and (max-width: 768px) {
