@@ -142,6 +142,7 @@
           </account>
         </accountCreateRequest>`;
 
+    $(".reg-status").text("");
     $(".loader").removeClass("hidden");
 
     $.ajax({
