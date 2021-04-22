@@ -33,23 +33,27 @@
     window.location.href = `https://session.draft.int.one.gamigo.com/login?locale=${lang}&service=https://${window.location.hostname}/sso.html`;
   }
 
-  const betaSurveyForm = document.getElementById('beta-survey-form');
+  const betaSurveyForm = document.getElementById("beta-survey-form");
   if (betaSurveyForm !== null) {
     const groupMap = {
       1: 3,
       2: 5,
       6: 3,
-    }
+    };
     const getInputs = function (groupN) {
-      const all = betaSurveyForm.getElementsByTagName('input');
+      const all = betaSurveyForm.getElementsByTagName("input");
       const result = [];
-      for (let i = 0, len = all.length; i < len ; i++) {
-        if (all[i].type === 'checkbox' && all[i].id.substring(0, 1) === groupN.toString()) { // id like "1a", "1b", ... "2c"...
+      for (let i = 0, len = all.length; i < len; i++) {
+        if (
+          all[i].type === "checkbox" &&
+          all[i].id.substring(0, 1) === groupN.toString()
+        ) {
+          // id like "1a", "1b", ... "2c"...
           result.push(all[i]);
         }
       }
       return result;
-    }
+    };
     const checkGroup = function (n) {
       if (!groupMap.hasOwnProperty(n)) {
         return;
@@ -66,13 +70,13 @@
         if (!inp.checked) {
           inp.disabled = disabled;
         }
-      })
+      });
     };
 
     Object.keys(groupMap).forEach((index) => {
       const inputs = getInputs(index);
       inputs.forEach((inp) => {
-        inp.addEventListener('change', () => {
+        inp.addEventListener("change", () => {
           checkGroup(index);
         });
       });
@@ -213,7 +217,7 @@
           const accountId = $(data).find("accountId").text();
           if (
             accountId &&
-            typeof GmgSession == 'object' &&
+            typeof GmgSession == "object" &&
             GmgSession.hasOwnProperty("sendRegistrationEvent")
           ) {
             GmgSession.sendRegistrationEvent(accountId, "Landing Page");
@@ -350,11 +354,19 @@
     }
   });
 
+  const phoneInput = document.querySelector("#phone");
+  const language = Cookies.get("language") || "en";
+  const iti = intlTelInput(phoneInput, {
+    utilsScript: "/assets/js/utils.js",
+    preferredCountries: ["us", "fr", "de"],
+    initialCountry: language === "en" ? "us" : language,
+  });
+
   $(document).on("submit", "form#beta-survey-form", function (ev) {
     ev.preventDefault();
 
     const version = $("input[name=version]").val();
-    const language = "en";
+    const language = Cookies.get("language") || "en";
     const storeToken = Cookies.get("storeToken");
     const data = $(this).serializeArray();
     const questionsCount = $(".survey-questions > li").length - 1;
@@ -383,6 +395,12 @@
       return;
     }
 
+    // verify phone number
+    if (iti.getValidationError() > 0) {
+      alert("Please provide a valid phone number");
+      return;
+    }
+
     // add optional fields if provided
     if (
       $("input[name=7]:checked").val() === "a" &&
@@ -393,7 +411,7 @@
 
     // generate query parameters
     const query = $.param({
-      phone: $("input[name=phone]").val(),
+      phone: iti.getNumber(),
       optin: $("input[name=optin]").is(":checked"),
       storeToken: storeToken,
     });

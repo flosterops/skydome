@@ -2497,3 +2497,28 @@ footer .legal ul li a {
     width: 90%;
   }
 }
+
+.iti__flag {
+  background-image: url("/assets/images/flags.png");
+}
+
+.iti__selected-flag {
+  padding: 0 6px 0 17px;
+}
+
+.iti__country-list {
+  top: 44px;
+  left: 6px;
+  border: 1px solid #2c6f98;
+  background-color: #00101d;
+}
+
+.iti__divider {
+  border-bottom: 1px solid #2c6f98;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {
+    background-image: url("/assets/images/flags@2x.png");
+  }
+}
