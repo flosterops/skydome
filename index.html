@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
+	<script type="text/javascript" src="https://webcdn.triongames.com/landingpages/skydome/assets/js/js.cookie.min.js"></script>
 	<script type="text/javascript">
 		const languages = ['en', 'de', 'fr'];
 		const detectedLanguage = (window.navigator.userLanguage || window.navigator.language).substring(0, 2);
 		const language = languages.includes(detectedLanguage) ? detectedLanguage : 'en';
+		Cookies.set("language", language);
 		location.href = `/${language}/`;
 	</script>
 	<title>Skydome – Where Tower Defense meets MOBA</title>

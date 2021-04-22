@@ -397,7 +397,7 @@ nav {
 
 .nav-container {
   width: 100%;
-  clip-path: polygon(0 0, 100% 0, 99% 100%, 1% 100%);
+  clip-path: polygon(0 0, 100% 0, 99% 1000%, 1% 100%);
   background: linear-gradient(to bottom, #13394c, #041824);
 }
 
@@ -416,6 +416,7 @@ nav ul li {
   display: block;
   font: 500 20px/24px "Kanit", sans-serif;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 nav ul li a {
@@ -436,6 +437,32 @@ nav ul li:hover::before {
   );
   width: 140px;
   height: 50px;
+}
+
+nav ul li.language-switcher:hover::before,
+nav ul li.language-switcher > ul li:hover::before {
+  content: unset;
+}
+
+.language-switcher {
+  position: absolute;
+  right: 190px;
+  overflow: visible;
+}
+
+.language-switcher > ul {
+  display: none;
+  position: absolute;
+  top: 58px;
+  left: 0;
+  padding: 0;
+  flex-direction: column;
+  background: rgb(108, 132, 143);
+  background: radial-gradient(circle, rgb(19, 57, 76) 0%, rgb(4, 24, 36) 100%);
+}
+
+.language-switcher:hover > ul {
+  display: flex;
 }
 
 .button {

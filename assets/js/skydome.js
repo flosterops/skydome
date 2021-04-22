@@ -352,6 +352,12 @@ $(document).ready(function () {
         $(".sidebar").sidebar("attach events",".toc"),$(".sidebar a.item").on("click",function(){$(".sidebar").sidebar("hide")});
     };*/
 
+  $(".language-switcher > ul > li").click(function () {
+    const lang = $(this).data("lang") || "en";
+    Cookies.set("language", lang);
+    window.location.href = "/" + lang + window.location.pathname.substring(3);
+  });
+
   $("#close-button").click(function () {
     $("#modal").toggleClass("open");
     $("#modal-overlay").toggleClass("open");
