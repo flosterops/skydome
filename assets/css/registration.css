@@ -359,7 +359,7 @@
   display: none;
   position: absolute;
   left: 0;
-  bottom: -160px;
+  top: 110%;
   z-index: 10;
 }
 
