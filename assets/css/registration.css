@@ -200,6 +200,21 @@
   font-size: 12px;
 }
 
+#register-form .reg-status {
+  color: #d63b39;
+  font-weight: bold;
+  text-align: center;
+  min-height: 30px;
+  margin-bottom: 10px;
+}
+
+#register-form .loader {
+  transform: scale(0.4);
+  position: absolute;
+  top: -11px;
+  right: -28px;
+}
+
 #register-form button[type="submit"] {
   width: 323px;
   height: 60px;
@@ -213,7 +228,6 @@
 
 #register-form .reg-submit-container {
   align-items: center;
-  margin-top: 50px;
 }
 
 #register-form .sign-in-container {

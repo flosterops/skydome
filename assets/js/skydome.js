@@ -109,6 +109,12 @@
     return lang.substr(0, lang.indexOf("/"));
   }
 
+  function showRegError(code) {
+    if (code !== "unknown_error") {
+      $(".reg-status").text(ERRORS[code] || ERRORS["unknown"]);
+    }
+  }
+
   $("form#register-form").on("submit", function (event) {
     event.preventDefault();
 
@@ -136,6 +142,8 @@
           </account>
         </accountCreateRequest>`;
 
+    $(".loader").removeClass("hidden");
+
     $.ajax({
       url: registerURl,
       method: "POST",
@@ -149,7 +157,7 @@
             .children()
             .toArray()
             .forEach((elem) => {
-              console.error("Registration error:" + $(elem).attr("code"));
+              showRegError($(elem).attr("code"));
             });
         } else {
           const storeToken = $(data).find("storeToken").text();
@@ -169,7 +177,9 @@
       .fail(function (e) {
         console.log(e);
       })
-      .always(function () {});
+      .always(function () {
+        $(".loader").addClass("hidden");
+      });
   });
 
   function validateEmail(value) {

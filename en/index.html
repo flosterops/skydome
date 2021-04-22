@@ -44,6 +44,14 @@
 			})(window,document,'script','dataLayer','GTM-TLJC7HC');</script>
 		<!-- End Google Tag Manager -->
 
+		<script>
+			const ERRORS = {
+				account_birthdate_invalid: "Birthdate invalid",
+				birthdate_underage: "Birthdate underage",
+				emailAddress_duplicate: "E-mail address duplicate",
+				unknown: "Unknown error occured"
+			}
+		</script>
 	</head>
 	<body>
 
@@ -194,11 +202,16 @@
 					</div>
 				</div>
 
+				
+				<div class="reg-status"></div>
 				<div class="flex reg-submit-container">
 					<button id="registration" type="submit">
 						register account
 						<span></span>
 					</button>
+					<div class="loader hidden">
+						<div class="lds-dual-ring"></div>
+					</div>
 				</div>
 				<div class="flex sign-in-container">
 					<p>If you have an account click here to: <a href="https://session.draft.int.one.gamigo.com/login?service=https://skydome.gamigo.io/sso.html">Sign in</a></p>
