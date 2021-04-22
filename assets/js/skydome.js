@@ -200,9 +200,10 @@
     const isMoreThanMin = value.length > min - 1;
     const isLessThanMax = value.length < max - 1;
     const hasUppercase = new RegExp(/(.*[A-Z].*)/).test(value);
+    const hasLowercase = new RegExp(/(.*[a-z].*)/).test(value);
     const hasSpecialChapter = new RegExp(/(?=.*[-+_!@#$%^&*., ?])/).test(value);
 
-    return isMoreThanMin && isLessThanMax && hasUppercase && hasSpecialChapter;
+    return isMoreThanMin && isLessThanMax && hasUppercase && hasLowercase && hasSpecialChapter;
   }
 
   function validateTos(checked) {
@@ -232,7 +233,8 @@
 
   $("form#register-form #password").on("input", function (event) {
     const value = event.target.value;
-    const oneAlph = $("#one-alphabetic-error");
+    const oneUpper = $("#one-upper-error");
+    const oneLower = $("#one-lower-error");
     const numAndSpecial = $("#one-num-and-special-error");
     const lengthErr = $("#length-error");
 
@@ -241,6 +243,7 @@
     const isMoreThanMin = value.length > min - 1;
     const isLessThanMax = value.length < max - 1;
     const hasUppercase = new RegExp(/(.*[A-Z].*)/).test(value);
+    const hasLowercase = new RegExp(/(.*[a-z].*)/).test(value);
     const hasSpecialChapter = new RegExp(/(?=.*[-+_!@#$%^&*., ?])/).test(value);
 
     if (isMoreThanMin && isLessThanMax) {
@@ -252,11 +255,19 @@
     }
 
     if (hasUppercase) {
-      oneAlph.addClass("success-color");
-      oneAlph.removeClass("error-color");
+      oneUpper.addClass("success-color");
+      oneUpper.removeClass("error-color");
     } else {
-      oneAlph.removeClass("success-color");
-      oneAlph.addClass("error-color");
+      oneUpper.removeClass("success-color");
+      oneUpper.addClass("error-color");
+    }
+
+    if (hasLowercase) {
+      oneLower.addClass("success-color");
+      oneLower.removeClass("error-color");
+    } else {
+      oneLower.removeClass("success-color");
+      oneLower.addClass("error-color");
     }
 
     if (hasSpecialChapter) {
