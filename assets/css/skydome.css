@@ -294,6 +294,11 @@ input[type="checkbox"] + label {
   padding-left: 30px;
   margin: 15px 5px;
   line-height: 27px;
+  transition: 400ms;
+}
+
+input[type="checkbox"]:disabled + label {
+  color: #888;
 }
 
 input[type="checkbox"] + label::before {
@@ -305,6 +310,11 @@ input[type="checkbox"] + label::before {
   height: 16px;
   border: 1px solid #2c6f98;
   background-color: #00101d;
+  transition: 400ms;
+}
+
+input[type="checkbox"]:disabled + label::before {
+  border-color: #444;
 }
 
 input[type="checkbox"]:checked + label::after {
@@ -1398,7 +1408,7 @@ nav ul li.language-switcher > ul li:hover::before {
 }
 
 /*.accordion li.open .link { color: #b63b4d; }
-  
+
   .accordion li.open i { color: #b63b4d; }*/
 
 .accordion li .chevron-down::before {
