@@ -359,7 +359,8 @@
     const phoneInput = document.querySelector("#phone");
     const language = Cookies.get("language") || "en";
     iti = intlTelInput(phoneInput, {
-      utilsScript: "/assets/js/utils.js",
+      utilsScript:
+        "https://webcdn.triongames.com/landingpages/skydome/assets/js/utils.js",
       preferredCountries: ["us", "fr", "de"],
       initialCountry: language === "en" ? "us" : language,
     });

@@ -2500,7 +2500,7 @@ footer .legal ul li a {
 }
 
 .iti__flag {
-  background-image: url("/assets/images/flags.png");
+  background-image: url("https://webcdn.triongames.com/landingpages/skydome/assets/images/flags.png");
 }
 
 .iti__selected-flag {
@@ -2520,6 +2520,6 @@ footer .legal ul li a {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .iti__flag {
-    background-image: url("/assets/images/flags@2x.png");
+    background-image: url("https://webcdn.triongames.com/landingpages/skydome/assets/images/flags@2x.png");
   }
 }
