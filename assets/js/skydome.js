@@ -354,10 +354,11 @@
     }
   });
 
+  var iti;
   if (typeof intlTelInput !== "undefined") {
     const phoneInput = document.querySelector("#phone");
     const language = Cookies.get("language") || "en";
-    const iti = intlTelInput(phoneInput, {
+    iti = intlTelInput(phoneInput, {
       utilsScript: "/assets/js/utils.js",
       preferredCountries: ["us", "fr", "de"],
       initialCountry: language === "en" ? "us" : language,
