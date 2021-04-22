@@ -29,7 +29,8 @@
 
 (function () {
   if ($("body").hasClass("require-store-token") && !Cookies.get("storeToken")) {
-    window.location.href = `https://session.draft.int.one.gamigo.com/login?service=https://${window.location.hostname}/sso.html`;
+    const lang = Cookies.get("language") || "en_US";
+    window.location.href = `https://session.draft.int.one.gamigo.com/login?locale=${lang}&service=https://${window.location.hostname}/sso.html`;
   }
 
   const betaSurveyForm = document.getElementById('beta-survey-form');
@@ -249,7 +250,13 @@
     const hasLowercase = new RegExp(/(.*[a-z].*)/).test(value);
     const hasSpecialChapter = new RegExp(/(?=.*[-+_!@#$%^&*., ?])/).test(value);
 
-    return isMoreThanMin && isLessThanMax && hasUppercase && hasLowercase && hasSpecialChapter;
+    return (
+      isMoreThanMin &&
+      isLessThanMax &&
+      hasUppercase &&
+      hasLowercase &&
+      hasSpecialChapter
+    );
   }
 
   function validateTos(checked) {
