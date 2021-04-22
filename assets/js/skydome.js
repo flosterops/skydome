@@ -30,7 +30,7 @@
 (function () {
   if ($("body").hasClass("require-store-token") && !Cookies.get("storeToken")) {
     const lang = Cookies.get("language") || "en_US";
-    window.location.href = `https://session.draft.int.one.gamigo.com/login?locale=${lang}&service=https://${window.location.hostname}/sso.html`;
+    window.location.href = `https://session.trionworlds.com/login?locale=${lang}&service=https://${window.location.hostname}/sso.html`;
   }
 
   const betaSurveyForm = document.getElementById("beta-survey-form");
@@ -178,7 +178,7 @@
       ? "<channel>skydomebeta</channel>"
       : "";
     const registerURl =
-      "https://glyph.draft.int.one.gamigo.com/api/v1_2/register-account.action?X-GameServer-Channel=4111";
+      "https://glyph.trionworlds.com/api/v1_2/register-account.action?X-GameServer-Channel=4111";
     const requestData = `<?xml version="1.0" encoding="UTF-8"?>
       <accountCreateRequest version="1.2">
         <account>
@@ -422,7 +422,7 @@
 
     // send request
     $.ajax({
-      url: `https://betasurvey.draft.int.one.gamigo.com/api/survey/${version}/${language}/?${query}`,
+      url: `https://betasurvey.trionworlds.com/api/survey/${version}/${language}/?${query}`,
       method: "POST",
       contentType: "application/json",
       data: JSON.stringify(answers),
