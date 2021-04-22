@@ -63,11 +63,11 @@
 	<div class="ui sidebar">
 		<a href="https://playskydome.com/de/" class="logosmall">Skydome</a>
 		<ul>
-			<li><a class="sb_item" href="">Media</a></li>
+			<li><a class="sb_item" href="">Medien</a></li>
 			<li><a class="sb_item" href="" target="_blank">Forum</a></li>
 			<li><a class="sb_item nlink" href="">Shop</a></li>
 		</ul>
-		<div class="signup"><a href="" title="Sign up" class="nlink" tabindex="-1">Sign up</a></div>
+		<div class="signup"><a href="" title="Registrieren" class="nlink" tabindex="-1">Registrieren</a></div>
 	</div>
 
 	<div class="pusher">
@@ -136,15 +136,15 @@
 					<img class="reg-form-bg" src="/assets/images/background/form-bg.svg" alt="form-background" />
 					<div class="flex reg-form-group">
 						<div class="flex">
-							<label for="email">Email Address</label>
+							<label for="email">Email Adresse</label>
 							<input type="email" id="email" name="email" required />
-							<span class="error" id="email-error">Email address must have the form 'email@server.com'</span>
+							<span class="error" id="email-error">Die Email-Adresse benötigt folgendes Format: email@server.com</span>
 						</div>
 					</div>
 					<div class="flex reg-form-group pass-form-group">
 						<div class="flex password-container">
 							<div class="flex">
-								<label for="password">Password</label>
+								<label for="password">Passwort</label>
 								<input type="password" id="password" name="password" required />
 							</div>
 							<button type="button" id="pass-visibility">
@@ -153,7 +153,7 @@
 							</button>
 						</div>
 						<div class="flex age-container">
-							<label for="age">Age</label>
+							<label for="age">Alter</label>
 							<input type="number" id="age" name="age" required min="1" max="99" oninput="validity.valid||(value='');" />
 							<span class="error" id="age-error">Age is Required.</span>
 						</div>
@@ -161,16 +161,16 @@
 							<span class="pass-error-title">Your new password must:</span>
 							<ul>
 								<li>
-									<span class="error-color" id="one-upper-error">Have at least 1 uppercase alphabetic character – A-Z</span>
+									<span class="error-color" id="one-upper-error">Habe mindestens 1 Großbuchstaben</span>
 								</li>
 								<li>
-									<span class="error-color" id="one-lower-error">Have at least 1 lowercase alphabetic character – a-z</span>
+									<span class="error-color" id="one-lower-error">Habe mindestens 1 Kleinbuchstaben</span>
 								</li>
 								<li>
-									<span class="error-color" id="one-num-and-special-error">Have at least 1 number (0-9), 1 valid special character (!,@,#,etc.), and not begin or end with a space.</span>
+									<span class="error-color" id="one-num-and-special-error">Habe mindestens 1 Zahl (0-9). 1 Sonderzeichen (!, @, #, usw.) und beginne oder ende nicht mit einem Leerzeichen </span>
 								</li>
 								<li>
-									<span class="error-color" id="length-error">Have between 8 and 32 characters – long strings and sentences are fully supported!</span>
+									<span class="error-color" id="length-error">Habe zwoschen 8 und 32 Zeichen – lange Zeichenfolgen und Sätze werden voll unterstützt</span>
 								</li>
 							</ul>
 						</div>
@@ -182,7 +182,7 @@
 						<div class="flex checkbox-container">
 							<input type="checkbox" id="tos" name="tos" />
 							<label for="tos">
-								I have read and agree to Gamigo's <a target="_blank" href="https://playskydome.com/de/legal/privacy-policy.html">Privacy Policy.</a>
+								Ich habe die <a target="_blank" href="https://playskydome.com/de/legal/privacy-policy.html">Datenschutzerklärung</a> der gamigo AG zur Kenntnis genommen
 							</label>
 							<span class="error" id="tos-error">You must accept the Terms of Use.</span>
 						</div>
@@ -210,7 +210,7 @@
 					<div class="reg-status"></div>
 					<div class="flex reg-submit-container">
 						<button id="registration" type="submit">
-							register account
+							Account erstellen
 							<span></span>
 						</button>
 						<div class="loader hidden">
@@ -218,7 +218,7 @@
 						</div>
 					</div>
 					<div class="flex sign-in-container">
-						<p>If you have an account click here to: <a href="https://session.trionworlds.com/login?locale=de_DE&service=https://skydome.gamigo.io/sso.html">Sign in</a></p>
+						<p>IWenn du bereits einen Account hast, dann klicke <a href="https://session.trionworlds.com/login?locale=de_DE&service=https://skydome.gamigo.io/sso.html">hier.</a></p>
 					</div>
 				</form>
 
