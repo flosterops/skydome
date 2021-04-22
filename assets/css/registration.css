@@ -326,7 +326,9 @@
 }
 
 #register-form #age-error {
-  left: -16px;
+  left: -116px;
+  width: 200px;
+  text-align: right;
   white-space: normal;
 }
 
