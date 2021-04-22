@@ -32,6 +32,52 @@
     window.location.href = `https://session.draft.int.one.gamigo.com/login?service=https://${window.location.hostname}/sso.html`;
   }
 
+  const betaSurveyForm = document.getElementById('beta-survey-form');
+  if (betaSurveyForm !== null) {
+    const groupMap = {
+      1: 3,
+      2: 5,
+      6: 3,
+    }
+    const getInputs = function (groupN) {
+      const all = betaSurveyForm.getElementsByTagName('input');
+      const result = [];
+      for (let i = 0, len = all.length; i < len ; i++) {
+        if (all[i].type === 'checkbox' && all[i].id.substring(0, 1) === groupN.toString()) { // id like "1a", "1b", ... "2c"...
+          result.push(all[i]);
+        }
+      }
+      return result;
+    }
+    const checkGroup = function (n) {
+      if (!groupMap.hasOwnProperty(n)) {
+        return;
+      }
+      const inputs = getInputs(n);
+      let checked = 0;
+      inputs.forEach((inp) => {
+        if (inp.checked) {
+          checked++;
+        }
+      });
+      let disabled = checked >= groupMap[n];
+      inputs.forEach((inp) => {
+        if (!inp.checked) {
+          inp.disabled = disabled;
+        }
+      })
+    };
+
+    Object.keys(groupMap).forEach((index) => {
+      const inputs = getInputs(index);
+      inputs.forEach((inp) => {
+        inp.addEventListener('change', () => {
+          checkGroup(index);
+        });
+      });
+    });
+  }
+
   $(document).on("submit", "form.registration-form", function (e) {
     e.preventDefault();
     var data = JSON.stringify({
@@ -166,7 +212,7 @@
           const accountId = $(data).find("accountId").text();
           if (
             accountId &&
-            GmgSession &&
+            typeof GmgSession == 'object' &&
             GmgSession.hasOwnProperty("sendRegistrationEvent")
           ) {
             GmgSession.sendRegistrationEvent(accountId, "Landing Page");
